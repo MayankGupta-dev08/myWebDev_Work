@@ -1,0 +1,47 @@
+What is HTML?
+    #   HTML stands for Hypertext Markup Language
+    #   HTML is the standard markup language for creating Web pages (giving a static skeleton to websites).
+    #   HTML describes the structure of a Web page
+    #   HTML consists of a series of elements
+    #   HTML elements tell the browser how to display the content
+    #   HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.
+
+What is CSS?
+    1.  CSS gives style to raw HTML
+    2.  CSS stands for cascading style sheets
+    3.  CSS is used to give style to our web pages.
+    4.  CSS is used to make our website responsive
+    5.  while html gives structure to our website, CSS takes the responsibility of design.
+    6. It makes the websites modern looking and presentable.
+
+What is JavaScript?
+    *   JS is a high level dynamic interpreted programming language.
+    *   Embedded within HTML.
+    *   It allows the client side scripting (as it is supported by all browser) to create completely dynamic websites and web applications.
+    *   Designed for programming user events (programs responds to useer interface actions, like mouse click, keystroke etc.)
+    *   Adds interactivity to a web page
+    *   Handles complex functions and features
+    *   Platform Indepenedent/ Architectural Indepenedent
+
+CSS SYNTAX:
+    p { color: blue; }
+        p stands for the selector and it decides which part of the HTML the CSS will be applied. It states where the CSS property is to be applied.
+        colour : It is the Property which you want to change or add. Whether you have to change colour, border, background, width, all these come under property. 
+        blue : The last section is for defining the value. All the properties will be changed according to the value we provide.
+
+    We can also target multiple properties at one time. The syntax is as follows-
+        header, p.intro {   background-color: red;
+                            border-radius: 3px;
+                        }
+
+        In the above example, we have changed the header tag and the paragraph tag with a class intro to change the background colour to red and border-radius to 3 pixels.
+
+    There are three ways to Add CSS-
+        Inline CSS- CSS is added to the elements directly using the style attributes.
+        Internal CSS- CSS is kept inside the head tags in <style> tags
+        External CSS- CSS is kept separately inside a .CSS style sheet. It involves two steps-
+            First, write the CSS in.CSS file.
+            Include that CSS file to Markup.
+        
+        Inline CSS takes the highest precedance among the three and out of internal and External css, the one which is written later takes more precedance.
+        We can also give priority to a particular style just by writing !importance
