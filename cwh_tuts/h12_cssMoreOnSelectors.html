@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS selectors</title>
+    <style>
+        h1 {
+            background-color:beige;
+            color: navy;
+            font-weight: bold;
+            text-align: center;
+            font-size: 250%;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            /* display: inline-block; */
+            text-align: center;
+            margin:0 auto;
+            padding: 8px 18px;
+
+        }
+        div p {
+            color: rgb(0, 0, 128);
+            background-color: orange;
+            font-weight: bold;
+            font-size: 120%;
+        }
+
+        /* if p is contained by any li and li was contained by a div */
+        div li p {
+            color:white;
+            background-color:forestgreen;
+            font-weight: bold;
+            font-size: 120%;
+        }
+
+        /* will affect only those p which is a direct child of div, if p is right inside a div */
+        div > p {
+            color:darkturquoise;
+            background-color:darkslateblue;
+            font-weight: bold;
+            font-size: 120%;
+        }
+        
+        /* this will affect only those p whose last sibling is a div */
+        /* only those p which are comming just after a div */
+        div + p{
+            color:yellow;
+            background-color:crimson;
+            font-weight: bold;
+            font-size: 120%;    
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Some more on CSS selectors</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li class="item"><p>This is a paragraph inside li</p></li>
+                <li> This is a line inside li but not a p, so this will not get affected</li>
+                <p>This is not a dirct child of div, although it is a p and inside a div.</p>
+            </ul>
+            <p> This is a paragraph</p>
+        </div>
+        <p> This is another paragraph</p>
+    </div>
+    <p> This is the third paragraph</p>
+</body>
+</html>

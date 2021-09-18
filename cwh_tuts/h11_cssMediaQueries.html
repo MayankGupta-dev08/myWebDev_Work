@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries</title>
+    <style>
+        .container{
+            border: 10px solid black;
+            background-color: beige;
+            width: 98vw;
+            height: 95.5vh;
+        }
+        .box{
+            font-size: 5rem;
+            text-align: center;
+            display: none;
+        }
+
+        @media only screen and (max-width:300px) {
+            #box-1{
+                display: block;
+                background-color: aqua;
+                color: blue;
+            }
+        }
+        
+        @media only screen and (min-width:300px) and (max-width:500px) {
+            #box-2{
+                display: block;
+                background-color:aquamarine;
+                color: green;
+            }
+        }
+
+        @media only screen and (min-width:500px) and (max-width:800px) {
+            #box-3{
+                display: block;
+                background-color:crimson;
+                color: white;
+            }
+        }
+
+        @media only screen and (min-width:800px){
+            #box-4{
+                display: block;
+                background-color:darkkhaki;
+                color: black;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box-1">For iphone screen</div>
+        <div class="box" id="box-2">For tablet screen</div>
+        <div class="box" id="box-3">For laptop screen</div>
+        <div class="box" id="box-4">For widescreen desktop</div>
+    </div>
+</body>
+</html>

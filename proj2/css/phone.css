@@ -1,0 +1,75 @@
+/* Navigation bar section */
+#navbar{
+    flex-direction: column;
+}
+#logo{
+    margin: 0px 2px;
+}
+#logo img{
+    margin: 0px 2px;
+    height: 50px;
+}
+#navbar ul li{
+    font-size: 1.0rem;
+}
+#navbar ul li a{
+    padding: 0px 8px;
+}
+
+
+/* Home section */
+#home{
+    padding: 0px 20px;
+}
+#home::before{
+    height: 565px;
+}
+#home p{
+    font-size: 1.0rem;
+    font-family: 'Bree Serif', serif;
+    margin: 4px;
+}
+
+/* Services section */
+#our-services{
+    flex-direction: column;
+}
+
+/* About us section */
+#clients{
+    flex-wrap: wrap;
+}
+
+/* Contact us section */
+
+
+/* Footer section */
+
+
+/* Utility Classes */
+.h-primary{
+    font-size: 1.9rem;
+    padding: 4px;
+    margin: 2px;
+}
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 1.5rem;
+    padding: 12px;
+    margin-bottom: 0px;
+}
+.h-tertiary{
+    font-family: 'Bree Serif', serif;
+    font-size: 1.1rem;
+    padding: 12px;
+}
+.btn{
+    padding: 1px 12px;
+    margin: 3px;
+    border: 2px solid silver;
+    border-radius: 18px;
+    background-color: maroon;
+    color: white;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size: 1.0rem;
+}

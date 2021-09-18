@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and After Pseudo Selectors</title>
+    <style>
+        body{
+            background-color: rgb(39, 30, 100);
+            color: aliceblue;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        /* Pseudo selector technique - important */
+        header::before{
+            background: url('https://source.unsplash.com/collection/190727/1600x900') no-repeat center center/cover;
+            content: "";    /* this is necessary for the image to be visibile. */
+            position: absolute;     /* this is necessary for the image to be visibile. */
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            z-index: -1;    /* this is for sending the image behind the text */
+            opacity: 0.3;   
+        }
+
+        .navigation{
+            display: flex;
+        }
+        li{
+            list-style: none;
+            padding: 4px 23px;
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            height: 344px;
+            /* border: 3px solid silver; */
+            margin: 25px 200px;
+            padding: 10px 10px;
+            align-items: center;
+            justify-content: center;
+        }
+        /* section::before{
+            content: "This is a section"
+        } */
+        p{
+            text-align: justify;
+            padding: 1px 15px;
+        }
+        h1{
+            font-size: 300%;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-decoration: underline;
+        }
+        #main{
+            text-align: center;
+            text-decoration: none;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 150%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="main">Mayank's Page</h1>
+    </header>
+    <nav class="navBar">
+        <ul class="navigation">
+            <li class="item">Home</li>
+            <li class="item">About</li>
+            <li class="item">Services</li>
+            <li class="item">Contact us</li>
+        </ul>
+    </nav>
+    <section>
+        <h1>Welcome to Food Blog</h1>
+        <p>“Listen to the people who love you. Believe that they are worth living for even when you don't believe it. Seek out the memories depression takes away and project them into the future. Be brave; be strong; take your pills. Exercise because it's good for you even if every step weighs a thousand pounds. Eat when food itself disgusts you. Reason with yourself when you have lost your reason.”
+        </p>
+    </section>
+    <hr>
+    <aside>
+
+    </aside>
+    <article>
+
+    </article>
+    <footer>
+
+    </footer>
+</body>
+</html>

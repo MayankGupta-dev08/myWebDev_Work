@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .navBar{
+            background-color: black;
+            border-radius: 30px;
+        }
+        .navBar ul{
+            overflow: auto;
+        }
+        .navBar li{
+            float: left;
+            list-style: none;
+            margin: 12px 20px;
+            padding-top: 4px;
+        }
+        .navBar li a{
+            color: white;
+            text-decoration: none;
+            padding: 4px 4px;
+        }
+        .navBar li a:hover{
+            color:cornsilk;
+        }
+        .search{
+            float: right;
+            color: white;
+            padding: 11px 75px;
+            margin: auto;
+        }
+        .navBar input{
+            border: 2px solid white;
+            padding: 2px 38px;
+            border-radius: 30px;
+            text-align: center;
+        }
+        .btn{
+            border: 1px solid gray;
+            border-radius: 14px;
+            padding: 3px 7px;
+            margin: 4px 2px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navBar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact us</a></li>
+                <div class="search">
+                    <input type="search" name="searchBar" id="searchBox" placeholder="Search in this website">
+                    <button class="btn">Go!</button>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    
+</body>
+</html>

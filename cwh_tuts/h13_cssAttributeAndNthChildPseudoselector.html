@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes and nth child PseudoSelector</title>
+    <style>
+        .container{
+            display: block;
+            width: 300px;
+            margin: 5px auto;
+            background-color: beige;
+            padding: 5px 55px;
+            border: 5px solid darkkhaki;
+        }
+        input{
+            display: block;
+        }
+        input{
+            padding: 4px 4px;
+            border: 2px solid crimson;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type='email']{
+            padding: 4px 4px;
+            border: 2px solid blue;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[class='btn']{
+            padding: 4px 8px;
+            margin: 4px auto;
+            border: 2px solid grey;
+            border-radius: 5px;
+            cursor: progress;
+            display: inline;
+        }
+
+        a[target]{
+            font-size: 35px;
+            color: orangered;
+            font-weight: bold;
+        }
+        a[target='_blank']{
+            font-size: 35px;
+            color: orange;
+            font-weight: bolder;
+        }
+        li{
+            font-size: 20px;
+            background-color: lightgrey;
+            width: 100px;
+            text-indent: 10px;
+        }
+
+        /* nth child pseudo selectors */
+
+        li:nth-child(odd){
+            color: brown;
+            font-weight: bold;
+            font-style: italic;
+        }
+        li:nth-child(even){
+            color: darkslateblue;
+            font-weight: bold;
+            font-style: italic;
+        }
+        li:nth-child(3){
+            color: darkgreen;
+            font-weight: bold;
+            font-style: italic;
+        }
+        li:nth-child(5n){
+            color: darkmagenta;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><a href="https://google.com" target="_blank">Google</a></h1>
+        <h1><a href="https://amazon.co.in" target="_self">Amazon</a></h1>
+        <form action="backend.php" class="form-control">
+            <input type="text" name="myName" placeholder="Enter your name">
+            <input type="email" name="myEmail" placeholder="Enter your email">
+            <input type="password" name="myPass" placeholder="Enter password">
+            <input type="submit" class="btn" value="Submit">
+            <input type="reset" class="btn" value="Reset">
+        </form>
+        <ul>
+            <li class="item" id="item-1">item1</li>
+            <li class="item" id="item-2">item2</li>
+            <li class="item" id="item-3">item3</li>
+            <li class="item" id="item-4">item4</li>
+            <li class="item" id="item-5">item5</li>
+            <li class="item" id="item-6">item6</li>
+            <li class="item" id="item-7">item7</li>
+            <li class="item" id="item-8">item8</li>
+            <li class="item" id="item-9">item9</li>
+            <li class="item" id="item-10">item10</li>
+        </ul>
+    </div>
+</body>
+</html>

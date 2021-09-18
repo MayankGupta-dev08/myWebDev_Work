@@ -1,0 +1,98 @@
+<!-- What is a Flexbox in CSS?
+    Flexbox is a one dimensional layout method for laying out items in rows or columns.
+    CSS Flexbox is a better way to align items into a container.
+    Flexbox = flexible + box -->
+
+    <!-- in flex container we can work along two axis which are main-axis along (x-direction) and cross-axis along (y-direction).  -->
+    <!-- in case of flex element inside a flex container we have main size along (x-direction) and cross-size along (y-direction).  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <style>
+        body{
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+        .container{
+            width: 100%;
+            height: 950px;
+            border: 4px solid black;
+            background-color:antiquewhite;
+            /* Initialize the container as a flex box */
+            display:flex;
+            /* Applying flex property for flex container */
+
+            /* flex-direction: row; */ /* by default */
+            /* flex-direction: column; */
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column-reverse; */
+
+            /* flex-wrap: nowrap; */    /* by default nowrap*/
+            /* flex-wrap: wrap; */
+            /* flex-flow: row-reverse wrap; */    /*short hand for using both flex direction and flex wrap simultaneously*/
+
+            /* this will justify the content in horizontal direction */
+            /* justify-content: center; */
+            /* justify-content: space-around; */
+            /* justify-content: space-between; */
+            justify-content: space-evenly;
+
+            /* this will justify the content in vertical direction */
+            align-items: center;
+            /* align-items: flex-start; */
+            /* align-items: flex-end; */
+            /* align-items: stretch; */
+
+        }
+        .item{
+            background-color: tomato;
+            border: 3px solid crimson;
+            margin: 10px;
+            padding: 4px;
+            width: 200px;
+            height: 200px;
+        }
+
+        /* appling flex properties to flex items */
+        #box-1{
+            /* order: 2; */
+                /* by default all have order:0, higher the order of a flex item, later it will be positioned in the flex container. */
+
+            flex-grow: 3;
+            flex-shrink: 5;
+        }
+        #box-2{
+            flex-grow: 2;
+            flex-shrink: 3;
+        }
+        #box-3{
+            flex-basis: 300px;
+                /* when the flex-direction of the container is set to row then flex-basis will control row. */
+                /* when the flex-direction of the container is set to column then flex-basis will control column. */
+
+            /* short hand for defining flex -grow, -shrink and -basis simultaneously is using flex: for a item */
+                /* flex: 2 2 355px; */
+
+            /* align-self: flex-start; */
+            align-self: flex-end;
+            /* align-self: centre; */
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox in CSS</h1>
+    <div class="container">
+        <div class="item" id="box-1">First box</div>
+        <div class="item" id="box-2">Second box</div>
+        <div class="item" id="box-3">Third box</div>
+        <div class="item" id="box-4">Fourth box</div>
+        <div class="item" id="box-5">Fifth box</div>
+        <div class="item" id="box-6">Sixth box</div>
+    </div>
+</body>
+</html>

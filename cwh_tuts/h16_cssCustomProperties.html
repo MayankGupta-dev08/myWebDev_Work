@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables/ Custom Properties</title>
+    <style>
+        
+        :root{  /* for creating global variables */
+            --pBorder-color: black; /* scope: like global variable */
+            --sBorder-color: darkblue;
+        }
+
+        .container{
+            --cntBkg-color: darkslateblue;  /* scope: like local variable */
+            display: flex;
+            border: 5px solid var(--pBorder-color); 
+            background-color: var(--cntBkg-color);  
+            height: 97vh;
+            justify-content: center;    /* for horizontally */
+            align-items: center;    /* for vertically */
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            margin: 5px 10px;
+            padding: 3px 20px;
+            background-color: lightskyblue;
+            border: 3px solid var(--sBorder-color);
+            border-radius: 50px;
+            text-align: justify;
+        }
+        .box h3{
+            color: navy;
+            text-align: center;
+            font-size: 25px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+            margin: 14px;  
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h3>Box1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ut eum cum quod exercitationem maxime architecto deserunt temporibus beatae aliquid! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae distinctio itaque maiores fugit iste magni. Explicabo magnam adipisci omnis laboriosam!
+            </p>
+        </div>
+        <div class="box">
+            <h3>Box2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ut eum cum quod exercitationem maxime architecto deserunt temporibus beatae aliquid! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae distinctio itaque maiores fugit iste magni. Explicabo magnam adipisci omnis laboriosam!
+            </p>
+        </div>
+        <div class="box">
+            <h3>Box3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ut eum cum quod exercitationem maxime architecto deserunt temporibus beatae aliquid! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae distinctio itaque maiores fugit iste magni. Explicabo magnam adipisci omnis laboriosam!
+            </p>
+        </div>
+    </div>
+</body>
+</html>

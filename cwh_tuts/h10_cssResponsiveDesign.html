@@ -1,0 +1,57 @@
+<!-- what is a Responsive deign ? -->
+    <!--1.  Responsive design is a way for a web developer to make a website adapt to all the devices and resolutions.
+        2.  Endless new resolutions and devices are challenging to support separately for a web developer; therefore, responsive design is the best approach to develop a website that can adjust itself according to the screen size.
+        3.  Responsive design is a necessity and not a luxury anymore! -->
+            
+        <!-- Various Ways To Achieve Responsive Design : -->
+            <!-- #   Setting up the viewport. -->
+            <!-- #   By using max-width/max-height. -->
+            <!-- #   Using CSS Media Queries. -->
+            <!-- #   By using rem/vh/vw units over pixels. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design</title>
+    <style>
+        html{
+         font-size: 25px;   
+        }
+
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container{
+            font-size: 20px;
+            border: 10px solid red;
+            /* width: 500px;
+            height: 500px; */
+
+            width: 100vw;
+            height: 100vh;
+        }
+        h1{
+            text-align: center;
+        }
+        #hd1{
+            font-size: 3em; /* font size will be now 3 times of its parent i.e. container which will be 3*20px = 60px */
+            padding: 1em;   /* now padding will be 1 times of its current font size = 1*60px = 60px  */
+        }
+        #hd2{
+            font-size: 3rem; /* font size will be now 3 times of its parent i.e. container which will be 3*20px = 60px */
+            padding: 1rem;   /* now padding will be 1 times of its current font size = 1*60px = 60px  */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="hd1">Heading 1</h1>
+        <h1 id="hd2">Heading 2</h1>
+        <h1 id="hd3">Heading 3</h1>
+    </div>
+</body>
+</html>
