@@ -33,11 +33,11 @@ html{
 
 /* Navigation Bar: Logo and Image */
 #logo{
-    margin: 10px 34px;
+    margin: 4px 34px;
 }
 #logo img{
     margin: 1px 4px;
-    height: 70px;
+    height: 60px;
 }
 
 /* Navigation Bar:  */
@@ -66,8 +66,8 @@ html{
 #home{
     display: flex;
     flex-direction: column;
-    padding: 3px 200px;
-    height: 530px;
+    padding: 3px 100px;
+    height: 505px;
     justify-content: center;
     align-items: center;
 }
@@ -75,7 +75,7 @@ html{
     content: "";
     position: absolute;
     background: url('../bg1.jpg') no-repeat center center/cover;
-    height: 630px;
+    height: 600px;
     width: 100%;
     top: 0px;
     left: 0px;
@@ -92,17 +92,19 @@ html{
     text-align: center;
     font-size: 1.5rem;
     font-family: 'Bree Serif', serif;
-    margin: 20px;
+    /* margin: 20px; */
 }
 
 /* Services Section */
 #our-services{
     display: flex;
-    margin: 12px 34px;
+    margin: 0px 20px;
+    margin-top: 14px;
+    margin-bottom: 25px;
 }
 #our-services .box{
-    margin: 3px 28px;
-    padding: 34px;
+    margin: 3px 10px;
+    padding: 25px;
     border: 3px solid brown;
     border-radius: 32px;
     background-color: #f3ebeb;
@@ -115,20 +117,22 @@ html{
 #our-services .box p{
     font-family: 'Dancing Script', cursive;
     text-align: justify;
-    font-size: 25px;
-    margin: 18px 6px;
+    font-size: 1.5rem;
+    margin: 10px 6px;
 }
 
 /* About us */
 #about-us{
-    height: 800px;
+    display: flex;
+    flex-direction: column;
+    /* height: 740px; */
 }
 #about-us::before{
     content: "";
     position: absolute;
     background: url('../bg5.jpg') no-repeat center center/cover;
     width: 100%;
-    height: 100%;
+    height: 750px;
     z-index: -1;
     opacity: 0.7;
 }
@@ -136,11 +140,11 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 12px 20px;
+    margin: 0px 20px;
 }
 #about-box .box{
     margin: 3px 28px;
-    padding: 34px;
+    padding: 25px;
     border: 3px solid brown;
     border-radius: 32px;
     background-color: #f3ebeb;
@@ -148,20 +152,21 @@ html{
 #about-box .box p{
     font-family: 'Dancing Script', cursive;
     text-align: justify;
-    font-size: 25px;
-    margin: 18px 6px;
+    font-size: 1.5rem;
+    margin: 6px;
 }
 
 #clients{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 #clients .client-item{
-    padding: 34px;
+    padding: 2px 30px;
 }
 #clients .client-item img{
-    height: 125px;
+    height: 100px;
 }
 
 /* Contact us */
@@ -225,8 +230,8 @@ footer{
 .h-primary{
     font-family: 'Bree Serif', serif;
     font-size: 3.8rem;
-    padding: 16px;
-    margin: 20px;
+    padding: 12px;
+    margin: 10px;
 }
 .h-secondary{
     font-family: 'Bree Serif', serif;
@@ -237,14 +242,14 @@ footer{
 .h-tertiary{
     font-family: 'Bree Serif', serif;
     font-size: 2.3rem;
-    padding: 12px;
+    padding: 6px;
 }
 .text-center{
     text-align: center;
 }
 .btn{
     padding: 4px 24px;
-    margin: 33px;
+    margin: 20px;
     border: 2px solid silver;
     border-radius: 18px;
     background-color: maroon;

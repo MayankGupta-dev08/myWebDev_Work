@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid - way of creating layout for a webpage</title>
+    <style>
+        #grid{
+            background-color: darkorange;
+            border: 3px solid darkred;
+            display: grid;
+            grid-template-rows: 1fr 4fr 1fr;    /* this specifies depth of first 3 rows */
+            grid-auto-rows: 3fr;    /* this specifies depth of rest of rows */
+            grid-template-columns: 1fr 4fr 2fr;
+            gap: 1rem;
+        }
+        .box{
+            background-color: crimson;
+            border: 2px dotted brown;
+            padding: 4px;
+            color: aliceblue;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+            margin: 3px 0px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="grid">
+        <div class="box">This is box-01</div>
+        <div class="box">This is box-02</div>
+        <div class="box">This is box-03</div>
+        <div class="box">This is box-04</div>
+        <div class="box">This is box-05</div>
+        <div class="box">This is box-06</div>
+        <div class="box">This is box-07</div>
+        <div class="box">This is box-08</div>
+        <div class="box">This is box-09</div>
+        <div class="box">This is box-10</div>
+    </div>
+</body>
+</html>

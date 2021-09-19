@@ -33,18 +33,53 @@
 /* Services section */
 #our-services{
     flex-direction: column;
+    margin: 12px;
+    margin-bottom: 25px;
+}
+#our-services .box p{
+    font-size: 1.1rem;
+    margin: 0px;
+}
+#our-services .box img{
+    height: 100px;
 }
 
 /* About us section */
+#about-box .box{
+    margin: 3px;
+    padding: 18px;
+}
+#about-box .box p{
+    font-size: 1.1rem;
+}
 #clients{
     flex-wrap: wrap;
 }
+#clients .client-item img{
+    height: 80px;
+}
 
 /* Contact us section */
-
+#contact-box input,
+#contact-box textarea{
+    font-size: .9rem;
+}
+#contact-box form{
+    width: 50%;
+}
+#contact-box label{
+    font-size: 1rem;
+}
+#contact-box .butn{
+    padding: 1px 16px;
+    margin: 2px;
+    font-size: 0.9rem;
+}
 
 /* Footer section */
-
+footer{
+    font-size: 1rem;
+}
 
 /* Utility Classes */
 .h-primary{
@@ -60,7 +95,7 @@
 }
 .h-tertiary{
     font-family: 'Bree Serif', serif;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     padding: 12px;
 }
 .btn{
