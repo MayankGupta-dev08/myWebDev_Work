@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Arrow Function in JavaScript</h1>
+    </div>
+    <script>
+        // function greet(){
+        //     console.log("Hello everyone! How are you?")
+        // }
+        
+        // another way of writing the above function is know as arrow method
+        // Arrow Function
+        let greet = () =>{
+            console.log("Hello! How are you?")
+        }
+        greet();
+
+        // Arrow function in  seTimeout
+        setTimeout(() => {
+            console.log("We are inside seeTimeout")
+        }, 3000);
+        
+        // another example of Arrow function
+        let sum = (a,b) =>{
+            return a+b;
+        }
+        console.log(sum(33,2));
+
+        // another shortcut of arrow function
+        let multiply = (a,b) => a*b;
+        console.log(multiply(2,4));
+
+        let square = n => n*n;
+        console.log(square(5));
+        
+
+        /* Now let us see the use of lexical this with the help of an example. If we make the object obj1 and an array of names and then make a function as speak which does the following task as follows- */
+        let obj1 = {
+            names: ["Harry", "Rohan", "SkillF", "DjKhiladi"],
+            // no need to include function keyword when defining a function inside an object
+            speak(){
+                // if we want to access the elements of names than we can't do in this fashion
+                // for (let index = 0; index < names.length; index++) {
+                //     const element = names[index];
+                //     console.log("Kukdoo koo, " + element);
+                // }
+
+
+                // this.names will refer to the names array of this object obj1
+                // we know that inside forEach we have to define a function, we can do this in two ways either use arrow function or the function keyword
+                
+                // here we will use arrow function to define,
+                // this.names.forEach( (student) =>{
+                //     console.log("Kukdoo koo, " + student);
+                // });
+
+                // here we will use the function keyword
+                this.names.forEach( function printContent(student){
+                    console.log("Kukdoo koo, " + student);
+                });
+                
+                // so both the ways are correct
+            }
+        }
+        obj1.speak();
+
+
+        let obj2 = {
+            greetings : "Hello! Good Morning,",
+            names: ["Harry", "Rohan", "SkillF", "DjKhiladi"],
+            speak(){
+                // this.names will refer to the names array of this object obj1
+                // we know that inside forEach we have to define a function, we can do this in two ways either use arrow function or the function keyword
+                
+                // when function keyword is used to define the function, than this inside the function will refer to that function, that's why it won't be able to get this.greetings here in this case
+                // this.names.forEach( function printContent(student){
+                //     console.log(this.greetings + " Kukdoo koo, " + student);
+                // });
+                
+                // when arrow function is used, then this inside the arrow function always points to its parent and not to itself
+                // it is known as 'lexical this'
+                this.names.forEach( (student) =>{
+                    console.log(this.greetings + " Kukdoo koo! " + student);
+                });
+            }
+        }
+        obj2.speak();
+
+    </script>
+</body>
+</html>

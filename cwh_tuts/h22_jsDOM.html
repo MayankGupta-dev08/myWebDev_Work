@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manipulating DOM - Document Object Model</title>
+</head>
+<body>
+    <div id="main" class="container">
+        <ul id="nav">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>More About Us</li>
+            <li>Contact Us</li>
+        </ul>
+    </div>
+    <div class="container">
+        Another Container
+    </div>
+    <script>
+        // get element by id
+        let main = document.getElementById('main');
+        console.log(main);
+        let nav = document.getElementById('nav');
+        console.log(nav);
+        
+        let navbar = document.getElementById('nav').innerHTML;  //returns all the contents of nav in a string format
+        console.log(navbar);
+        
+        // get element by class name
+        let containers = document.getElementsByClassName('container');  //returns array of elements with className as specified
+        console.log(containers);
+        
+        console.log(containers[0]);
+        console.log(containers[1]);
+        
+        // get element by css selectors
+        let sel = document.querySelector('.container'); //returns the first element whose class in container
+        console.log("Selector returns ", sel)
+
+        let sel1 = document.querySelector('#nav>li');   //returns the first element whose id is nav but inside a li
+        console.log("Selector returns ", sel1)
+
+        let sel2 = document.querySelectorAll('#nav>li');
+        console.log("Selector returns ", sel2)
+
+        sel2[1].innerHTML = "Changed using querySelector"
+
+    </script>
+</body>
+</html>

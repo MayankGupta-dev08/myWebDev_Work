@@ -45,3 +45,10 @@ CSS SYNTAX:
         
         Inline CSS takes the highest precedance among the three and out of internal and External css, the one which is written later takes more precedance.
         We can also give priority to a particular style just by writing !importance
+
+
+    What is JavaScript?
+        JavaScript, which is abbreviated as JS, is a programming language that conforms to the ECMAScript specification. It was initially created to make web pages alive. JavaScript is high-level, often just-in-time compiled, multi-paradigm. It is lightweight and most commonly used as a part of web pages, whose implementations allow client-side script to interact with the user and make dynamic pages. Using JavaScript, we can change and update both HTML and CSS. JavaScript has no link with Java programming language. It is a fully independent language with its own specification.
+
+    What is the difference between the Client-side and Server Side?
+        Client-side and server-side in the term of web development, describes where application code runs. Web developers will also refer to this distinction as the frontend vs. the backend. In web development, the client-side refers to everything in a web application displayed on the client end (end-user device). The browser interprets HTML and CSS on the client-side. Whereas, the server-side is where all the request coming from client-side is handled. The working which is performing on the server-side is not visible to the end-user. The Server-side has the business logic for dynamic webpages.

@@ -1,0 +1,96 @@
+<!-- 
+An HTML event can be something the browser does or something a user does. Here are some examples of HTML events:
+    An HTML web page has finished loading
+    An HTML input field was changed
+    An HTML button was clicked
+Often, when events happen, you may want to do something. JavaScript lets you execute code when events are detected.
+HTML allows event handler attributes, with JavaScript code, to be added to HTML elements. Here is a list of some common HTML events-
+    Browser events:
+        Onchange-  An HTML element has been changed
+        Onclick- The user clicks an HTML element
+        Onmouseover-   The user moves the mouse over an HTML element
+        Onmouseout-The user moves the mouse away from an HTML element
+        Onmousedown-
+        Onmouseup-
+        Onkeydown- The user pushes a keyboard key
+        Onload- The browser has finished loading the page
+        
+        contextmenu
+        
+        submit 
+        focus
+
+        DOMContentLoaded
+
+        transitionend
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Js Events - Browser Events and Listening to events</title>
+</head>
+<style>
+    #btn {
+        padding: 10px 14px;
+        background-color: red;
+        border: 2px solid black;
+        color: white;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <h1>Browser Events and Listening to events </h1>
+        <p id="parag">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut rem quidem quaerat eos minima, neque
+            sapiente ipsam debitis tempore quae sequi autem sunt ea cupiditate? Saepe corporis, laboriosam facere
+            distinctio sint qui unde ipsam molestias officiis totam ullam id illum iusto accusantium dicta aspernatur
+            tempore atque rerum optio consectetur similique ad culpa veritatis. Dolores atque fuga, dignissimos vel
+            velit minus, necessitatibus ipsum culpa recusandae architecto repellendus harum voluptatem placeat fugiat
+            blanditiis minima temporibus vero quasi consectetur odio. Dignissimos veniam ad recusandae nemo quam quia
+            eligendi. Cumque similique ut enim pariatur hic blanditiis reprehenderit maiores quibusdam ratione quisquam
+            beatae laborum aperiam magnam iure debitis voluptas, molestiae animi est id eum? Quae maxime corrupti
+            asperiores nemo at aperiam minima architecto incidunt necessitatibus. Minus explicabo similique quaerat!
+            Tenetur quae amet sint quaerat at ad veniam, pariatur similique qui totam beatae ut eos, maiores minus
+            assumenda voluptatem voluptas doloremque quia corporis illum eaque nemo ipsum labore alias. Magnam, vel
+            quaerat qui excepturi est tenetur ab, esse asperiores porro beatae quasi nobis placeat. Natus in perferendis
+            nam vitae, enim odio eveniet animi sunt ut nobis rem velit dicta possimus quo obcaecati deserunt assumenda,
+            est molestias quam a. Repudiandae ipsam soluta eveniet quia assumenda error autem cum repellat eius nisi.
+            Dolores, perferendis, velit nisi omnis dolore voluptatum nostrum quasi, sit odio aut quas quia minus rerum
+            accusamus suscipit ex maiores commodi. Ipsum quisquam quo ab modi vitae animi eaque!</p>
+    </div>
+    <button id="btn" onclick="toggleHide()">Show/Hide</button>
+    <!-- using onclick event we can fire a function which can be userdefined also -->
+
+    <script>
+        function toggleHide() {
+            let para = document.getElementById('parag');
+            if (para.style.display != 'none') { //if we want to change the style of an element then, variableName.style.display
+                para.style.display = 'none';
+            }
+            else {
+                para.style.display = 'block';
+            }
+        }
+
+        let para = document.getElementById('parag');
+        para.addEventListener('mouseover', function run() {
+            console.log('Mouse Inside')
+        });
+
+        para.addEventListener('mouseout', function run() {
+            console.log('Mouse now went outside')
+        });
+
+    </script>
+</body>
+
+</html>

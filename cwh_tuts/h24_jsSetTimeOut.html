@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript SetTimeOut and ClearTimeout</title>
+</head>
+
+<body>
+    <div class="container">
+        Time now is <span id="time"></span>
+    </div>
+    <script>
+        console.log("This is tutorial 58");
+        // setTimeout --> Allows us to run the function once after the interval of time
+        // clearTimeout --> Allows us to run the function repeatedly after the interval of time
+
+        function greetings() {
+            console.log("Hello, how are you?");
+        }
+
+        // we can have 0, 1, 2, or any number of parameters passed inside the function
+        greetings();    //as soon as line is encountered function is called.
+        setTimeout(greetings, 2000);    //will call the function after 2 sec of arriving at the page
+        // setTimeout(greetings(), 5000);   //will not work as we only have to specify the name of the function but not the function call
+
+        function hello(name){
+            console.log("Hello "+name);
+        }
+        setTimeout(hello, 3000, "Mayank");
+        // calling the function hello() using seTimeOut function after 3 sec and also passing a parameter 
+
+
+        function greet(name, byeText) {
+            console.log("Hello Good Morning " + name + " " + byeText);
+        }
+        setTimeout(greet, 5000, 'Mayank', 'Its nice to have you');
+
+
+        // timeOut = setTimeout(greet, 5000, "Harry", "Take Care");
+        // console.log(timeOut);
+        // clearTimeout(timeOut);   //clears the log which was supposed to occur with the timeout id returned by setTimeOut 
+
+
+        // setInterval(greet, 1000, "Harry", "Good Night");    //continuously logs after particular time interval
+
+        // intervalId = setInterval(greet, 1000, "Harry", "Good Night");
+        // clearInterval(intervalId);   //works same as clearTimeOut, but it is for setIterval instead of setTimeOut
+
+        function displayTime() {
+            time = new Date();
+            console.log(time);
+            document.getElementById('time').innerHTML = time;
+        }
+        setInterval(displayTime, 1000);
+    </script>
+</body>
+
+</html>

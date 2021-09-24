@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Media Queries with CSS Grid</title>
+    <style>
+        .container {
+            display: grid;
+            gap: 1rem;
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section aside'
+                'footer footer footer footer';
+        }
+
+        nav {
+            grid-area: navbar;
+        }
+
+        section {
+            grid-area: section;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        .bdr {
+            border: 2px solid black;
+            background-color: darkslateblue;
+            color: white;
+            text-align: center;
+            padding: 10px 23px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        @media only screen and (max-width:470px) {
+            body {
+                background-color: lightgrey;
+            }
+
+            .container {
+                display: grid;
+                gap: 1rem;
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+            }
+
+            aside{
+                display: none;
+            }
+            
+            span{
+                display: block;
+                text-align: center;
+            }
+        }
+        
+        @media only screen and (min-width:470px) and (max-width:940px) {
+            body {
+                background-color: lightcoral;
+            }
+            
+            .container {
+                display: grid;
+                gap: 1rem;
+                grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section section'
+                'aside aside aside aside'
+                'footer footer footer footer';
+            }
+            
+            aside{
+                display: none;
+            }
+            
+            span{
+                display: block;
+                text-align: center;
+            }
+        }
+        
+        @media only screen and (min-width:940px) and (max-width:1410px) {
+            body {
+                background-color: lightgreen;
+            }
+            
+            .container {
+                display: grid;
+                gap: 1rem;
+                grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section section'
+                'aside aside aside aside'
+                'footer footer footer footer';
+            }
+            
+            span{
+                display: block;
+                text-align: center;
+            }
+        }
+
+        @media only screen and (min-width:1410px) {
+            body {
+                background-color: lightskyblue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="bdr">
+            <span>Home</span>
+            <span>Services</span>
+            <span>About us</span>
+            <span>Contact us</span>
+        </nav>
+        <section class="bdr">
+            <h2>Learn CSS in hindi</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est iusto corrupti, accusantium expedita, culpa
+                voluptatibus, minus repudiandae dolorum quaerat aut doloremque commodi animi quibusdam eum error
+                assumenda iste obcaecati ipsa. Fugiat earum recusandae ipsa nihil, quibusdam nam ad eligendi quaerat
+                deserunt asperiores laudantium alias voluptatibus, fugit et est iste, ullam laborum. Necessitatibus cum
+                fugiat dicta facere aperiam perspiciatis quibusdam sequi explicabo esse itaque quaerat repudiandae, in
+                omnis amet dolores pariatur, veritatis quam, doloremque quasi nulla nisi facilis aspernatur eaque
+                placeat? Ab iste fuga unde ullam aperiam fugit doloribus rerum excepturi expedita beatae harum, earum,
+                provident exercitationem quae accusamus debitis praesentium delectus ducimus dolor adipisci officiis
+                nulla molestias! Omnis mollitia quidem dicta, error consequatur cum atque ullam illum nobis accusantium
+                dignissimos magnam placeat porro fugiat impedit delectus, facere rerum architecto dolorum dolorem! Dicta
+                quisquam fuga ad tenetur alias error dolore quos repellat quasi? Fugit maiores reiciendis ipsam a
+                nesciunt laborum et eveniet accusantium ratione excepturi tempore earum libero rem eligendi ut omnis
+                vitae quo quas modi minus aperiam, nihil doloremque voluptatibus explicabo. Officiis quod omnis culpa
+                iure quis doloremque quidem dicta in ipsam et, placeat perferendis blanditiis cupiditate ipsum
+                recusandae ratione animi doloribus est enim saepe dignissimos consequuntur unde alias rem?Lorem ipsum
+                dolor sit amet, consectetur adipisicing elit. Doloribus facilis eius totam animi ea error, possimus
+                accusamus? Eius ipsa reiciendis repellendus! Laudantium architecto consequuntur iure, quis minima,
+                corrupti, maxime nostrum voluptates molestias aut ratione labore dolores veniam quae? Odio at culpa cum
+                voluptatem sapiente, nisi maiores facilis neque necessitatibus blanditiis nam aspernatur omnis eius quos
+                ipsum, laborum consectetur rerum vel sint itaque consequuntur molestiae tempora modi laboriosam.
+                Voluptates aperiam deleniti dolorem dignissimos, ratione illum beatae eum reiciendis. Repellendus, nisi
+                quam quisquam, maxime ea, cum in minus facere ab est assumenda. Laboriosam ex dolorem rem, veritatis
+                iusto quaerat animi ea a.</p>
+        </section>
+        <aside class="bdr">
+            <h1>More about us</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos vero repellat consequatur ratione modi
+                perspiciatis amet rem quas debitis, natus nesciunt perferendis rerum earum magnam sapiente sunt quo,
+                reprehenderit, qui optio consectetur! Earum, minima!</p>
+        </aside>
+    </div>
+    <footer class="bdr">
+        Copyright&copy; www.codeWithMayank.com. All rights reserved.
+    </footer>
+</body>
+
+</html>
