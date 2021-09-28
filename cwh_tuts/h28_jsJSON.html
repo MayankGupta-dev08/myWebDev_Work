@@ -1,0 +1,45 @@
+<!-- 
+JSON is a format for storing and transporting data. JSON is often used when data is sent from a server to a web page.
+What is JSON?
+    JSON stands for JavaScript Object Notation
+    JSON is a lightweight data-interchange format
+    JSON is language independent
+    JSON is "self-describing" and easy to understand
+The JSON syntax is derived from JavaScript object notation syntax, but the JSON format is text only. The code for reading and generating JSON data can be written in any programming language.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Tutorial</title>
+</head>
+
+<body>
+    <div class="container">This is my container</div>
+    <script>
+        let jsonObj = {
+            name: "Harry",
+            channel: "CWH",
+            friend: "Rohan Das",
+            food: "Bhindi" //#bhindiLoverSquad
+        }
+        
+        console.log(jsonObj);
+
+        // converting a json object into a json string
+        let myJsonStr = JSON.stringify(jsonObj);
+        console.log(myJsonStr);
+
+        myJsonStr = myJsonStr.replace('Harry', 'Larry');
+        console.log(myJsonStr)
+
+        newJsonObj = JSON.parse(myJsonStr);
+        console.log(newJsonObj)
+
+    </script>
+</body>
+
+</html>

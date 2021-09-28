@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading"> Welcome to Code With Harry</h1>
+        <div id="myfirst" class="child red good" id="first">child 1
+
+            <ul class="this">
+                <li class="childul">this</li>
+                <li class="childul">is</li>
+                <li class="childul">a</li>
+                <li class="childul">list </li>
+                <li class="childul">of my dreams</li>
+            </ul>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithharry.com">Go to Code With Harry</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <input type="button" value="submit">
+        </form>
+    </div>
+    <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div>
+    <script>
+        console.log('Welcome to tutorial 15');
+
+        let cont = document.querySelector('.no');
+
+        cont = document.querySelector('.container');
+        let nodeNam = cont.childNodes[1].nodeName;
+        console.log(nodeNam)
+        
+        let nodeTyp = cont.childNodes[1].nodeType;
+        console.log(nodeTyp)
+        
+        /* Node types
+            1. Element  -   An Element node like <h1> or <p>.
+            2. Attribute    -   An Attribute of an Element.
+            3. Text Node    -   The actual Text inside an Element
+            8. Comment      -   A Comment node
+            9. document     -   A Document node
+            10. docType     -   A DocumentType(<!DOCTYPE html>) node
+            11. DocumentFragment    -   A DocumentFragment node. 
+        */
+
+        /* Its always better to use children instead of childNodes and all other element  */
+
+        // console.log(cont.childNodes);    //will count new lines and comments also
+        console.log(cont.children);  //will only consider html elements
+
+        let container = document.querySelector('div.container');
+        console.log(container.children[1].children[0].children);
+
+
+        // console.log(container.firstChild);
+        console.log(container.firstElementChild);
+
+        // console.log(container.lastChild);
+        console.log(container.lastElementChild);
+
+        // console.log(container.children);
+        console.log(container.childElementCount); // Count of child elements
+
+        // console.log(container.firstElementChild.parentNode);
+        console.log(container.firstElementChild.parentElement);
+        
+        // console.log(container.firstElementChild.nextSibling);
+        console.log(container.firstElementChild.nextElementSibling);
+
+        // console.log(container.firstElementChild.previousSibling);
+        console.log(container.firstElementChild.previousElementSibling);
+
+        console.log(container.firstElementChild.nextElementSibling.nextElementSibling);
+    </script>
+</body>
+
+</html>

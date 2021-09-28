@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading" class='myhead'> Welcome to Code With Harry</h1>
+        <div id="myfirst" class="child red good">LIST - child 1
+            <ul class="this">
+                <li class="childul" id="fli">this</li>
+                <li class="childul">is</li>
+                <li class="childul">a</li>
+                <li class="childul">list </li>
+                <li class="childul" id="lli">of my dreams</li>
+            </ul>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <div>
+                <a href="//codewithharry.com">Go to Code With Harry</a>
+            </div>
+            Search this website: <br><input type="text" name="Hello" id="">
+            <!-- <input type="button" id='btn' value="submit"> -->
+            <input type="submit" id='btn' value="submit">
+        </form>
+    </div>
+    <div>
+        <div class="no">this is a dummy div1</div>
+        <div class="no">this is a dummy div2</div>
+        <div class="no">this is a dummy div3</div>
+    </div>
+</body>
+
+<script>
+    // console.log('This is tut 20');
+
+    // Add a key-value pair inside local Storage
+    localStorage.setItem(001, 'Harry');
+    localStorage.setItem(002, 'Sherry');
+    localStorage.setItem('003', 'Marry');
+    localStorage.setItem('Name4', 'Barry');
+    console.log(localStorage);
+    console.log(typeof localStorage);
+    
+    
+    // if key is a number than it has to be printed using the below format
+    console.log(localStorage[001]);
+    console.log(localStorage[002]);
+    
+    // but if key is a string than it can be printed using either of the two formats
+    console.log(localStorage['003']);
+    console.log(localStorage.Name4);
+    
+    
+    // another way Retrieve an item from the local Storage
+    let name = localStorage.getItem(001);
+    console.log(name);
+    
+    
+    // Clears the entire local storage
+    // localStorage.clear();
+    
+    // Clear a particular key-value pair
+    localStorage.removeItem('003');
+    console.log(localStorage);
+    
+    
+    // how to store an array in a local storage
+    let impArray = ['adrak', 'pyaz', 'bhindi'];
+    localStorage.setItem('Sabzi', JSON.stringify(impArray));    // firstly coverting the object/array into a string format
+    name = JSON.parse(localStorage.getItem('Sabzi'));           // coverting the string into its original format
+    console.log(name);
+
+
+    sessionStorage.setItem('sessionName', 'sHarry');
+    sessionStorage.setItem('sessionName2', 'sRohan');
+    sessionStorage.setItem('sessionSabzi', JSON.stringify(impArray));
+    sessionStorage.clear();
+
+</script>
+
+</html>

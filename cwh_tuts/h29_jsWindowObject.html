@@ -1,0 +1,90 @@
+<!-- 
+The Window Object:-
+    The window object represents a window in the browser containing the DOM document. The browser automatically creates a window object. The window is not the object of the JavaScript. It is the object of the browser. A window can be the main window, a frameset, or even a new window created with JavaScript. The developers use the window object to close and open browser window, displaying alert and prompt dialogs.
+    Window object has many properties and methods. The following are the few properties and methods of window object.
+
+    Window Object Properties:-
+        The window object properties are the variables created inside the window object. We can access the properties of window object by using the syntax:
+
+    window.propertyname
+        where property name is the name of the property.
+        by default window is a global object whose property can be accessed without even mentioning its name
+
+The following are the most popular window object properties:
+Properties       Explanation
+width        -   It specifies the initial width of the browser window.
+height       -   It specifies the initial height of the browser window.
+innerWidth   -   It specifies the initial width of the window content area
+innerHeight  -   It specifies the initial height of the window content area
+outerWidth   -   It specifies the initial width of the navigator window
+outerHeight  -   It specifies the initial height of the navigator window
+menubar      -   It specifies whether the window should contain the browser menubar
+location     -   It specifies whether the window should contain the browser location/URL box
+scrollbars   -   It hides or shows browser horizontal/vertical scrollbars
+top          -   Specified the number of pixels from the top of the screen to the new window
+scrollX      -   It returns the value of scrolling done in X direction in the window
+scrollY      -   It returns the value of scrolling done in Y direction in the window
+
+
+Window Object Methods:-
+    The window object methods are the functions that are created inside the Window Object. These methods are used to perform various actions on the browser window, such as how it displays a message or gets input from the user.
+    Following are the some of the most commonly used window object methods:
+
+Method          Description
+alert()     -   It will display an alert box with a message on the screen
+prompt()    -   It will display a dialog box that prompts the user for input
+confirm()   -   It will display a dialog box with a message on the screen
+close()     -   It will close the current window
+open()      -   It will open a new browser window
+blur()      -   It will remove focus from the current window
+focus()     -   It will set the focus to the current window
+moveTo()    -   It will move a window to the specified position
+print()     -   It will print the content of the current window
+resizeBy()  -   It will resize the window by the specified pixels
+resizeTo()  -   It will resize the window to the specified height and width
+scrollBy()  -   It will scroll the document by the specified number of pixels
+scrollTo()  -   It will scroll the document to the specified coordinates
+stop()      -   It will stop the window from loading
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object</title>
+</head>
+
+<body>
+    <script>
+        console.log('This is tut 11');
+        let a = window;
+        console.log(a);          
+        
+        a = window.document;
+        console.log(a);
+
+        // window.alert('hello harry');
+        // alert('hello harry');
+        a = prompt('This will destroy your computer. Type your name');
+        a = confirm('Are you sure you want to delete this page?');
+        a = window.innerHeight;
+
+        // as window is a global object, so we don't have to specify it everytime when working with its properties
+        a = innerWidth;
+        a = scrollX;
+        a = scrollY;
+        
+        a = location.toString();
+        console.log(a);
+
+        a = window.history;
+        console.log(a);
+    </script>
+</body>
+
+</html>

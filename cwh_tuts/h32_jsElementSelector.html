@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading"> Welcome to Code With Harry</h1>
+        <div id="myfirst" class="child red good">child 1
+
+            <ul class="this">
+                <li class="childul">this</li>
+                <li class="childul">is</li>
+                <li class="childul">a</li>
+                <li class="childul">list </li>
+                <li class="childul">of my dreams</li>
+            </ul>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithharry.com">Go to Code With Harry</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <input type="button" value="submit">
+        </form>
+    </div>
+    <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div>
+    
+    <script>
+        console.log('Welcome to tutorial 14');
+        /*Element selectors:
+            1. Single element selector
+            2. Multi element selector*/
+
+        // 1. Single element selector
+        let element = document.getElementById('myfirst');
+        // element = element.className;
+        // element = element.childNodes;
+        // element = element.parentNode;
+        element.style.color = 'red';
+        element.innerText = 'Harry is a good boy';
+        element.innerHTML = '<b>Harry is a good boy</b>';
+        // console.log(element.innerText);
+
+
+        let sel = document.querySelector('#myfirst');
+        sel = document.querySelector('.child'); //gives only first element of class child
+        sel = document.querySelector('div');    //returns only first tag which matches
+        sel.style.color = 'green';
+        console.log(sel)
+
+        // 2. Multi element selector
+        let elems = document.getElementsByClassName('child');
+        elems = document.getElementsByClassName('container');
+        // console.log(elems[0].getElementsByClassName('child'))
+        
+        elems = document.getElementsByTagName('div');
+        console.log(elems)
+
+        for (let index = 0; index < elems.length; index++) {
+            const element = elems[index];
+            console.log(element);
+        element.style.color = 'blue'; 
+        }
+        // Array.from(elems).forEach(element => {
+        //     console.log(element);
+        //    element.style.color = 'blue'; 
+        // });
+        // console.log(elems[0].getElementsByClassName('child'))
+
+    </script>
+</body>
+
+
+</html>

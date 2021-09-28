@@ -3,6 +3,10 @@
 
 // 1. Ways to print in JavaScript
 console.log("Hello World");
+
+// This is used to clear the console.
+console.clear();
+
 console.log('CodeWithHarry');  
 console.log(1); 
 console.log(true); 
@@ -20,11 +24,48 @@ This method writes a message to the console that the assertion failed and the me
 Example:- */
 console.assert(0>1, "Expression is false")
 
+/* Console.warn():-
+This method is used to log a warning message to the console. By default, the warning message will be highlighted with yellow color.
+Example:- */
+console.warn("This is a warning");
 
+/* Console.error():-
+Used to log error message to the console. Useful in the testing of code. By default, the error message will be highlighted with red color.
+Example:- */
+console.error("This is a simple error");
+
+/* Console.time() and Console.timeEnd():-
+With the help of console.time() and console.timeEnd() we can find the amount of time spend by a code on execution.
+Example:- */
+console.time('Your for loop took');
+for (let i = 0; i < 100; i++) {
+  // code
+}
+console.timeEnd('Your for loop took');
+
+/* Console.group() and Console.groupEnd():-
+group() and groupEnd() methods of the console object allow us to group contents in a separate block, indented. Just like the time() and the timeEnd(), they also accept the label, again of the same value.
+Example:- */
+console.group('simple'); 
+console.log('Item1'); 
+console.log('Item2'); 
+console.log('Item3'); 
+console.groupEnd('simple'); 
+console.log('new section');
+
+
+/* Custom Console logs:- 
+If the user has even a little idea about CSS, they can add Styling to the console logs to make logs Custom. The Syntax for it is to add the CSS styling as a parameter to the logs, which will replace %c in the logs as shown in the example below: 
+Example:- */
+const spacing = '8px'; 
+const mystyle =  
+`padding: ${spacing}; background-color: white; color: blue ; font-style:
+italic; border: 1px solid black dotted; font-size: 2em;`; 
+console.log('%cCode With Mayank', mystyle);
 
 
 // alert function in JS
-// alert("alert message!!");    //alert() will generate an in-browser modal window which will dissplay a message and the user can't do anything on that window untill it deals with that alert, by pressing ok.
+alert("alert message!!");    //alert() will generate an in-browser modal window which will dissplay a message and the user can't do anything on that window untill it deals with that alert, by pressing ok.
 
 // prompt function in JS
 // let user = prompt("What is your name?","Guest");
@@ -38,7 +79,7 @@ console.assert(0>1, "Expression is false")
     // console.log("Deletion terminated")
 
 // write function in 
-// document.write("this is document write")
+document.write("this is document write")
 
 // 2. Javascript console API
 console.log("Hello World", 4 + 6, "Another log");
@@ -48,14 +89,33 @@ console.log("Hello World", 4 + 6, "Another log");
 // 3. JavaScript Variables
 // What are Variables? - Containers to store data values
 
-/*
-multi line 
-commment
+/* Most common programming case types:
+1. camelCase  
+2. kebab-case
+3. snake_case 
+4. PascalCase 
 */
+
+/* 3 type of variable in javascript
+1.  let - block scope, local variable, mostly prefered
+2.  var - global variable, old method
+3.  const - when we want to declare a const variable whose value can't be changed
+*/
+
+/* Data Types in JavaScript - At a very high level, there are two types of data types in JavaScript
+    1. Primitive data types:
+        undefined, null, number, string, boolean, symbol
+        Memory allocation in stack 
+    2. Reference data types: 
+        Arrays, Objects, functions, dates
+        Memory allocation in heap 
+*/
+
 
 let number1 = 34;
 let number2 = 56;
-// console.log(number1 + number2);
+console.log(number1 + number2);
+console.log("Data type: " + (typeof number1));
 
 // we can also reassign the variable with any value of any data type which is not the case in other languages
 number1 = "abc";
@@ -63,6 +123,7 @@ number2 = 88.68
 
 // Apart from var, we can define varibale by using let, var and also without using any keyword also
 let n1 = true;
+console.log("Data type: " + (typeof n1));
 n1 = 2;
 n2 = 5;
 
@@ -86,6 +147,7 @@ let num2 = 56.76;
 let str1 = "This is a string";
 let str2 = 'This is also a string';
 console.log(str1 +" "+ str2);
+console.log("Data type: " + (typeof str1));
 // We can use "" in str made using '' and '' in str made using " ".
 
 let Name = "Harry";
@@ -104,6 +166,15 @@ console.log("backspace\b");
 let str3 = new String("This is a string");  // creating string using string constructor
 console.log(str3);
 
+const pi = 3.14;
+// p1 = 54;    //not valid, as pi was defined as const varibale
+
+const arr0 = [1,5,2,6,3,8,66];
+console.log(arr0);
+// const arr0 = [15,8,3,5]; //this is not allowed
+arr0.push(85);  //although arr0 is const we are not completely changing the arr0, but only adding another variable which is allowed
+console.log(arr0);
+
 // document.getElementById('firstContainer').innerHTML = '<h2>Heading 2 is inserted</h2>'
 
 
@@ -119,6 +190,7 @@ console.log(myDict.yourName);
 console.log(myDict.age);
 console.log(myDict['age']);
 console.log(myDict['channel 2']);
+console.log("Data type: " + (typeof myDict));
 
 // Booleans
 let abb = true;
@@ -128,17 +200,15 @@ console.log(abb, baa);
 // var und = undefined;
 var und;
 console.log(und);
+console.log("Data type: " + (typeof und));
 
 var n = null;
 console.log(n);
-/*
-At a very high level, there are two types of data types in JavaScript
-1. Primitive data types: undefined, null, number, string, boolean, symbol
-2. Reference data types: Arrays and Objects
-*/
+console.log("Data type: " + (typeof n));
 
 var arr = [1, 2, "bablu", 4.4, 5]
 console.log(arr)
+console.log("Data type: " + (typeof arr));
 
 // Operators in JavaScript
 // Arithmetic Operators
@@ -279,22 +349,94 @@ do{
     j--;
 } while (j>0);
 
+/* Type Conversion */
+let myVar;
+console.log(myVar, (typeof myVar));
+myVar = String(34);
+console.log(myVar, (typeof myVar));
+
+let booleanVar = true;
+console.log(booleanVar, (typeof booleanVar));
+booleanVar = String(true);
+console.log(booleanVar, (typeof booleanVar));
+
+let date = new Date();
+console.log(date, (typeof date));
+date = String(date);
+console.log(date, (typeof date));
+
+let arr9 =  [1,2,3,4,5];
+console.log(arr9.length, (typeof arr9));
+arr9 = String(arr9);
+console.log(arr9.length, (typeof arr9));
+
+// Another way of converting a Number into a String
+let i = 75;
+console.log(i.toString())
+
+// Converting into a Number
+let stri = Number("3434");  //valid
+stri = Number("343d4"); //NAN   //invalid
+stri = Number(true);   //1  //valid
+stri = Number([1,2,3,4,5,6,7,8,9]); //invalid
+// console.log(stri, (typeof stri));
+
+stri = parseInt('85');
+console.log(stri, (typeof stri));
+
+let number = parseFloat('34.098');
+console.log(number, (typeof number));
+
+// if we want to print our numbers only upto a certain number of decimal but don't want to change its actual value
+console.log(number.toFixed(2), (typeof number))
+
+/* Type coercion */
+let mystr = "698";
+let mynum = 34;
+console.log(mystr + mynum); //69834
+
+mystr = Number("698");
+console.log(mystr + mynum); //732
 
 
+// Array Methods
 let myArr = ["Fan", "Camera", 34, 5, null, true, undefined];
 let arr1 = new Array(34, 5, null, true, 'volvo', "dog");
-// Array Methods
 // console.log(myArr.length);
 console.log(arr1);
 let len1 = arr1.length;
 console.log(len1);
+
 let newarr = arr1.sort();
 console.log(newarr);
+
 newarr.pop();     //pops last element
 console.log(newarr);
+
+newarr.shift()  //pops an element from the start
+console.log(newarr);
+
 newarr.push("harry")  //get pushed at the end
 console.log(newarr);
-newarr.shift()
+
+newarr.unshift("first")  //get pushed at the starting
+console.log(newarr);
+
+console.log(newarr.indexOf('first'));   //0
+console.log(newarr.indexOf('harry'));   //6
+console.log(newarr.indexOf('cherry'));  //-1
+
+newarr.splice(2,3); //starting from index 2, it will reomve 3 elements from array
+console.log(newarr);
+
+newarr.reverse()
+console.log(newarr);
+
+let newarr2 = [1,2,5,63,7];
+console.log(newarr);
+newarr = newarr.concat(newarr2);
+console.log(newarr);
+
 const newLen = newarr.unshift("Harry")
 console.log(newLen);
 console.log(newarr);
@@ -306,13 +448,17 @@ console.log(arr2[0]);
 console.log(arr2[1]);
 console.log(arr2);
 
+console.log(Array.isArray(arr2));   //true
+console.log(Array.isArray('arr2')); //false
+
 
 // String Methods in JavaScript
 let myLovelyString = "Harry is a good boy good good Harry";
-// console.log(myLovelyString.length)
-// console.log(myLovelyString.indexOf("good"))
-// console.log(myLovelyString.firstIndexOf("good")) //find good from index 0 or start of string
-// console.log(myLovelyString.lastIndexOf("good")) //find good from index n-1 or end of string
+console.log(myLovelyString.length)
+console.log(myLovelyString.indexOf("good")) //find good from index 0 or start of string
+console.log(myLovelyString.lastIndexOf("good")) //find good from index n-1 or end of string
+console.log(myLovelyString.endsWith("good")) //returns true or false
+console.log(myLovelyString.includes("good")) //returns true or false
 
 // console.log(myLovelyString.slice(1,4))   //slicing of string str.slice(m,n) means [m,n) ,where m and n are index values
 var substr1 = myLovelyString.slice(1,7);
@@ -324,7 +470,7 @@ console.log(substr1);
 console.log(substr2);
 console.log(substr3);
 
-d = myLovelyString.replace("Harry", "Rohan");
+d = myLovelyString.replace("Harry", "Rohan");   //only replaces the first occurrence
 console.log(myLovelyString);
 d = d.replace("good", "bad");
 console.log(d);
@@ -335,6 +481,8 @@ console.log(str);
 
 console.log(str.toUpperCase());
 console.log(str.toLowerCase());
+// original string will remain unchanged, if we want it to get changed than we have to equte it
+console.log(str);
 
 var newStr = str.concat('and this also.');
 console.log(newStr);
@@ -350,13 +498,25 @@ console.log(charcode);
 
 console.log(str[3]);    //accessing a particular element of a string using index
 
+
+/* template literals */
+let fruit1 = 'Orange\'';
+let fruit2 = 'Apple';
+let myName = 'Mayank'
+let myHtml = `Hello ${myName}
+            <h1> This is "my" heading </h1>
+            <p> You like ${fruit1} and ${fruit2}`;
+
+document.body.innerHTML = myHtml;
+
+
 // Date function
 let myDate = new Date();
-// console.log(myDate.getTime());
-// console.log(myDate.getFullYear());
-// console.log(myDate.getDay());
-// console.log(myDate.getMinutes());
-// console.log(myDate.getHours());
+console.log(myDate.getTime());
+console.log(myDate.getFullYear());
+console.log(myDate.getDay());
+console.log(myDate.getMinutes());
+console.log(myDate.getHours());
  
 // DOM Manipulation
 let elem = document.getElementById('click');
@@ -365,21 +525,21 @@ let elem = document.getElementById('click');
 let elemClass = document.getElementsByClassName("container")
 // console.log(elemClass);
 // elemClass[0].style.background = "yellow";
-elemClass[0].classList.add("bg-primary")
-elemClass[0].classList.add("text-success")
+// elemClass[0].classList.add("bg-primary")
+// elemClass[0].classList.add("text-success")
 // console.log(elem.innerHTML);
 // console.log(elem.innerText); 
 
 // console.log(elemClass[0].innerHTML);
 // console.log(elemClass[0].innerText); 
-tn = document.getElementsByTagName('div')
+// tn = document.getElementsByTagName('div')
 // console.log(tn)
-createdElement = document.createElement('p');
-createdElement.innerText = "This is a created para";
-tn[0].appendChild(createdElement);
-createdElement2 = document.createElement('b');
-createdElement2.innerText = "This is a created bold";
-tn[0].replaceChild(createdElement2, createdElement);
+// createdElement = document.createElement('p');
+// createdElement.innerText = "This is a created para";
+// tn[0].appendChild(createdElement);
+// createdElement2 = document.createElement('b');
+// createdElement2.innerText = "This is a created bold";
+// tn[0].replaceChild(createdElement2, createdElement);
 // removeChild(element); ---> removes an element
  
 // Selecting using Query
@@ -433,6 +593,7 @@ logKaro = ()=>{
     document.querySelectorAll('.container')[1].innerHTML = "<b> Set interval fired</b>"
     console.log("I am your log")
 }
+
 // SetTimeout and setinterval
 // clr = setTimeout(logKaro, 5000);
 // clr = setInterval(logKaro, 2000);

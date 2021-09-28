@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading" class='myhead'> Welcome to Code With Harry</h1>
+        <div id="myfirst" class="child red good">LIST - child 1
+            <ul class="this">
+                <li class="childul" id="fli">this</li>
+                <li class="childul">is</li>
+                <li class="childul">a</li>
+                <li class="childul">list </li>
+                <li class="childul" id="lli">of my dreams</li>
+            </ul>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <div>
+                <a href="//codewithharry.com">Go to Code With Harry</a>
+            </div>
+            Search this website: <br><input type="text" name="Hello" id="">
+            <!-- <input type="button" id='btn' value="submit"> -->
+            <input type="submit" id='btn' value="submit">
+        </form>
+    </div>
+    <div>
+        <div class="no">this is a dummy div1</div>
+        <div class="no">this is a dummy div2</div>
+        <div class="no">this is a dummy div3</div>
+    </div>
+</body>
+
+<script>
+    console.log("This is tutorial 17 on events");
+    document.getElementById("heading").addEventListener("click", function (e) {
+        console.log("You have clicked the heading");
+        // location.href = '//codewithharry.com'
+        let variable;
+        variable = e.target;
+        variable = e.target.className;
+        variable = e.target.id;
+        variable = Array.from(e.target.classList);
+        variable = e.offsetX;
+        variable = e.offsetY;
+        variable = e.clientX;
+        variable = e.clientY;
+
+        console.log(variable);
+    });
+
+    console.log("This is tutorial 17 on events");
+
+    let bttn = document.getElementById('btn');
+    bttn.addEventListener('click', func1);
+    bttn.addEventListener('dbclick', func2);
+    // bttn.addEventListener('mousedown', func3);
+
+    function func1(e) {
+        // console.log("thanks", e);
+        e.preventDefault(); //to bypass any default behaviour - like on clicking submit button we move to other page but here it will be prevented by above statement
+    }
+
+    function func2(e) {
+        console.log("thanks, its a double click", e);
+        e.preventDefault();
+    }
+
+    function func3(e) {
+        console.log("thanks, its a mousedown", e);
+        e.preventDefault();
+    }
+
+    document.querySelector('.no').addEventListener('mouseenter', function(){
+     console.log('You entered no')
+    });
+
+    document.querySelector('.no').addEventListener('mouseleave', function(){
+        console.log('You exited no')
+    });
+
+    document.querySelector('.container').addEventListener('mousemove', function (e) {
+        console.log(e.offsetX, e.offsetY);
+        document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetX},154)`;
+        console.log('You triggered mouse move event')
+    });
+
+</script>
+
+</html>

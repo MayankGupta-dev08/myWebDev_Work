@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Creating, Removing & Replacing Elements</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading"> Welcome to Code With Harry</h1>
+        <div id="myfirst" class="child red good">List
+            <ul class="this" id='myul'>
+                <li class="childul" id='fui'>this</li>
+                <li class="childul">is</li>
+                <li class="childul">a</li>
+                <li class="childul">list </li>
+                <li class="childul" id='lui'>of my dreams</li>
+            </ul>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//google.co.in">Google</a><br><br>
+            Search this website: <br><input type="text" name="Hello" id="">
+            <input type="button" value="submit">
+        </form>
+    </div>
+    <div id='mysecond'>
+        <div class="no">this is a dummy div1</div>
+        <div class="no">this is a dummy div2</div>
+        <div class="no">this is a dummy div3</div>
+    </div>
+
+    <script>
+        console.log('this is tut 16');
+        let element = document.createElement('li');
+        let text = document.createTextNode('I am a text node');
+        // adding TextNode to the element
+        element.appendChild(text);
+
+        // Add a class name to the li element
+        element.className = 'childul';
+        element.id = 'createdLi';
+        element.setAttribute('title', 'mytitle');   //setting attribute title="mytitle" in element li
+        console.log(element)
+
+        /* another way of adding text to the element */
+        // element.innerText = 'Hello this is created by harry';
+        // element.innerHTML = '<b>Hello this is created by harry</b>';
+
+        let ul = document.querySelector('ul.this');
+        // adding createdElement to the selected element  
+        ul.appendChild(element);
+        console.log(ul)
+
+
+        // creating a <p> tag, adding text to it and adding it to webpage
+        let para = document.createElement('p');
+        let txt = document.createTextNode("this is a paragraph, that i have created using createElement");
+        para.appendChild(txt);
+        para.className = 'pclass';
+        para.id = 'pid';
+        console.log(para);
+        let chld2 = document.getElementById('mysecond');
+        chld2.appendChild(para);
+        console.log(chld2);
+
+
+        /* setAttribute
+            The setAttribute() method is used to set an attribute on the specified element. Using this method, a new attribute is added with the specified name and value. If the attribute already exists on the element, the value is updated. Here is an example: */
+        let anc = document.createElement('a');
+        anc.id = 'myAnchor';
+        // anc.setAttribute("href", "https://codewithharry.com/");
+        anc.setAttribute("href", "https://codewithharry.com/");
+        anc.setAttribute("target", "_blank");
+        console.log(anc);
+        
+        
+        /* getAttribute() :-
+        The getAttribute() method is used to get the current value of a attribute on the specified element. If the attribute does not exist on the element, it will return null. Here is an example: */
+        let h = anc.getAttribute('target');
+        console.log(h);
+        
+        
+        /* hasAttribute():-
+        The hasAttribute() method is used to check an element has a specified attribute or not. The syntax is  */
+        let flag = anc.hasAttribute('href');
+        if (flag == true) {
+            console.log("It has the attribute which was asked");
+        } else {
+            console.log("It doesn't have attribute which was asked");
+        }
+        
+        
+        /* removeAttribute() :-
+        The removeAttribute() method is used to remove an attribute from the specified element. The difference between this method and the removeAttributeNode() method is that the removeAttributeNode() method removes the specified Attr object, while this method removes the attribute with the specified name. The result will be the same. Also this method has no return value, while the removeAttributeNode() method returns the removed attribute as an Attr object. */
+        anc.removeAttribute('target');
+        flag = anc.hasAttribute('target');
+        console.log(flag);
+        
+        
+        /* replaceWith():- 
+        The replaceWith() method replaces this ChildNode in the children list of its parent with a set of Node. Here is an example: */
+        let elem2 = document.createElement('h3');
+        elem2.id = 'elem2id';
+        elem2.className = 'elem2class';
+        let tnode = document.createTextNode('This is a created node for elem2');
+        elem2.appendChild(tnode);
+        element.replaceWith(elem2);
+        
+        let myul = document.getElementById('myul');
+        myul.replaceChild(element, document.getElementById('fui'));
+        myul.removeChild(document.getElementById('lui'));
+        
+        
+        // quick quiz
+        // create a heading element with text as "Go to CodeWithHarry" and create an a tag outside it with href = "https://www.codewithharry.com"
+        let hd3 = document.createElement('h3');
+        let xtx = document.createTextNode('Go to Code With Harry');
+        hd3.class = 'headings';
+        hd3.id = 'hd3';
+        hd3.appendChild(xtx);
+        console.log(hd3);
+        
+        let cont = document.querySelector('.container');
+        cont.appendChild(hd3);
+        console.log(cont);
+        hd3.innerHTML = '<a href="https://www.codewithharry.com">Go to CodeWithHarry</a>';
+        console.log(hd3);
+    </script>
+
+</body>
+
+</html>

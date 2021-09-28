@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Editable div using JavaScript</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: darkslateblue;
+            color: whitesmoke;
+            height: 965px;
+            width: 100%;
+        }
+        .box{
+            margin: 5px;
+            padding: 6px 34px;
+            border: 3px solid black;
+        }
+        h1{
+            margin: 5px;
+            padding: 6px 34px;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id='myHead'>
+            <h1 >Editable div using JavaScript</h1>
+        </div>
+        <div class="box" id="para">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore eos quia omnis labore. Suscipit voluptatum quo consectetur qui? Officia, exercitationem.</p>
+        </div>
+    </div>
+</body>
+<script>
+    /* You have to create a div and inject it into the page which contains a heading.
+    whenever someone clicks on the div, it should be converted into an editable item. 
+    whenever user clicks away (blur). save the note into the local storage. */
+    
+    // create a new element
+    let divElem = document.createElement('div');
+
+    // Giving element its id, style and class
+    divElem.setAttribute('id', 'divId');
+    divElem.setAttribute('class', 'box');
+    divElem.setAttribute('style', 'border: 3px solid black; margin:34px; padding: 18px;  width:800px;');
+
+    // Add text to that created element
+    let val = localStorage.getItem('text');
+    let text;
+    if(val == null)
+        text = document.createTextNode("Click to edit in this.");
+    else
+        text = document.createTextNode(val);
+    divElem.appendChild(text);
+
+    // grabbing the main container in which we want to put the div and element with id before which we want to insert
+    let cont = document.querySelector('.container');
+    let beforediv = document.getElementById('para');
+
+    // now inserting in element with class=container but before element with id=para
+    cont.insertBefore(divElem, beforediv);
+
+    // just for check
+    console.log(cont);
+
+    // add event listener to the divElem
+    divElem.addEventListener('click', function(){
+        let noTextAreas = document.getElementsByClassName('textarea').length;
+        if(noTextAreas==0){
+            let html = divId.innerHTML;
+            divElem.innerHTML = `<textarea class="textarea form-control" aria-label="With textarea" id='textarea' rows='5' cols='110'>${html}</textarea>`;
+        }
+
+        //listen for the blur event on textarea
+        let textarea = document.getElementById('textarea');
+        textarea.addEventListener('blur', function() {
+            // divElem.innerHTML = textarea.value;
+            localStorage.setItem('text', textarea.value);
+        });
+    });
+</script>
+
+</html>
