@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Literals, Constructors and Object Oriented JavaScript</title>
+    <style>
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: aliceblue;
+            background-color: rgb(55 55 116);
+            margin: 25px;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Object Literals, Constructors and Object Oriented JavaScript</h1>
+        <p>Before getting into the detail of JavaScript OOP concepts, let us first understand what Object-oriented
+            programming (OOP) is. The basic idea of object-oriented programming is that objects are used to model real
+            world things that we want to represent inside our programs. We can also describe OOP as the OOP provides a
+            simple way to access functionality that would otherwise be hard or impossible to make use of.</p>
+    </div>
+    <hr>
+    <div>
+        <div>
+            <h2>What are objects?</h2>
+            <p>Objects can contain related code and data, representing information about the thing we are trying to
+                model, and functionality that we want it to have. Object data is stored neatly inside an object package,
+                making
+                it easy to structure and access. <br>
+                JavaScript is a powerful programming language that supports Object-Oriented Programming (OOP). In
+                JavaScript, objects created using object literal are singletons. This means when we made a change in an
+                object, it affects the object entire the script. Whereas if an object is created using the constructor
+                function, then the change will not affect the object throughout the script.</p>
+        </div>
+        <div>
+            <h3>Objects created using object literal:-</h3>
+            <p>Since these are singletons, a change to an object affects the object's entire script. A change in one
+                instance will affect all the instances of the object. Object literal is a comma-separated list of
+                name-value pairs inside the curly braces. The object literals encapsulate the data. This minimizes the
+                use of global variables, which
+                can cause problems when combining the code.</p>
+            <p>However, if we have to create multiple instances of a structure and perform operations based on
+                predefined values, then we should use a function constructor.</p>
+            <hr>
+            <h3>Objects created using the constructor function:-</h3>
+            <p>The object that is defined with a function constructor lets us have multiple instances of that object. If
+                the change is made to one instance, it will not affect other instances. As we know that the constructor
+                is essentially a function that acts as a blueprint for creating objects. A convention for declaring
+                constructors is always to capitalize its function name.</p>
+            <h4>"new" keyword:-</h4>
+            <p>
+                To create a new object instance, we use the "new" keyword to create an object based on a constructor.
+                Adding the "new" keyword is a crucial step when creating an object from a constructor. The new keyword
+                creates a new empty object. It binds property or function, which is declared with this keyword to the
+                new object.</p>
+        </div>
+    </div>
+    <script>
+        console.log("This is tut 27");
+
+        // Object Literal for creating objects
+        let car = {
+            name: "Maruti 800",
+            topSpeed: 89,
+            run: function () {
+                console.log("car is running");
+            }
+        };
+        // we have already seen constructors like these:
+        // new Date();
+
+        // Creating a constructor for cars
+        function GeneralCar(givenName, givenSpeed) {
+            this.name = givenName;
+            this.topSpeed = givenSpeed;
+            this.run = function () {
+                console.log(`${this.name} Is Running`);
+            };
+            this.analyze = function () {
+                console.log(
+                    `${this.name} is slower by ${200 - this.topSpeed} Km/H than Mercedes`
+                );
+            };
+        }
+        car1 = new GeneralCar("Nissan", 150);
+        car2 = new GeneralCar("Maruti Alto", 80);
+        car3 = new GeneralCar("Scorpio", 180);
+        console.log(car1, car2, car3);
+        
+        console.log(car1.run());
+        console.log(car1.analyze());
+        
+        console.log(car2.run());
+        console.log(car2.analyze());
+        
+        console.log(car3.run());
+        console.log(car3.analyze());
+    </script>
+</body>
+
+</html>
