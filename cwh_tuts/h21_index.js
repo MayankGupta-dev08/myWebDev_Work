@@ -153,7 +153,7 @@ console.log("Data type: " + (typeof str1));
 let Name = "Harry";
 let channel = "CodeWithHarry";
 let temp = `${Name} is a 'good' boy and he has a "youtube" channel called ${channel}.`;
-// we can use "" and '' inside a string made using ``
+// we can use "" and '' inside a string made using `` (backticks), the above way of writing the string using backticks and using ${} inside it is called template literals
 console.log(temp);
 
 let len = channel.length;   //string len, just like arr.length in java
@@ -524,15 +524,16 @@ let elem = document.getElementById('click');
 
 let elemClass = document.getElementsByClassName("container")
 // console.log(elemClass);
-// elemClass[0].style.background = "yellow";
+elemClass[0].style.background = "yellow";
 // elemClass[0].classList.add("bg-primary")
 // elemClass[0].classList.add("text-success")
 // console.log(elem.innerHTML);
 // console.log(elem.innerText); 
 
 // console.log(elemClass[0].innerHTML);
-// console.log(elemClass[0].innerText); 
-// tn = document.getElementsByTagName('div')
+// console.log(elemClass[0].innerText);
+
+let tn = document.getElementsByTagName('div')
 // console.log(tn)
 // createdElement = document.createElement('p');
 // createdElement.innerText = "This is a created para";
