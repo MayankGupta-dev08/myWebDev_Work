@@ -1,0 +1,5 @@
+*   fs          --> file system library
+*   minimist    --> minimist library for taking inputs easily
+*   axios       --> library for downloading content from web
+*   jsdom       --> library for processing html file (which when we will try to read directly will be avalable in string) and prepare a DOM for working or manipulating data
+*   excel4node  --> library for creating excel file

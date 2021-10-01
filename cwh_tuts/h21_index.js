@@ -7,22 +7,22 @@ console.log("Hello World");
 // This is used to clear the console.
 console.clear();
 
-console.log('CodeWithHarry');  
-console.log(1); 
-console.log(true); 
-console.log(null); ;  
+console.log('CodeWithHarry');
+console.log(1);
+console.log(true);
+console.log(null);;
 console.log([1, 2, 3]); // array inside log
-console.log({name:"Harry", language:"JavaScript", tutorial:2}); // object inside log
+console.log({ name: "Harry", language: "JavaScript", tutorial: 2 }); // object inside log
 
 /* Console.table ():-
 To generate a table inside a console, we use console.table() method. The input must be an array or an object which will be displayed as a table. In the example, we provide the object as an input.
 Example:- */
-console.table({name:"Harry", language:"JavaScript", tutorial:2});
+console.table({ name: "Harry", language: "JavaScript", tutorial: 2 });
 
 /* Console.assert():-
 This method writes a message to the console that the assertion failed and the message we provide as a parameter, but only if an expression evaluates to false. If the expression is true, then nothing will happen.
 Example:- */
-console.assert(0>1, "Expression is false")
+console.assert(0 > 1, "Expression is false")
 
 /* Console.warn():-
 This method is used to log a warning message to the console. By default, the warning message will be highlighted with yellow color.
@@ -39,28 +39,28 @@ With the help of console.time() and console.timeEnd() we can find the amount of 
 Example:- */
 console.time('Your for loop took');
 for (let i = 0; i < 100; i++) {
-  // code
+    // code
 }
 console.timeEnd('Your for loop took');
 
 /* Console.group() and Console.groupEnd():-
 group() and groupEnd() methods of the console object allow us to group contents in a separate block, indented. Just like the time() and the timeEnd(), they also accept the label, again of the same value.
 Example:- */
-console.group('simple'); 
-console.log('Item1'); 
-console.log('Item2'); 
-console.log('Item3'); 
-console.groupEnd('simple'); 
+console.group('simple');
+console.log('Item1');
+console.log('Item2');
+console.log('Item3');
+console.groupEnd('simple');
 console.log('new section');
 
 
 /* Custom Console logs:- 
 If the user has even a little idea about CSS, they can add Styling to the console logs to make logs Custom. The Syntax for it is to add the CSS styling as a parameter to the logs, which will replace %c in the logs as shown in the example below: 
 Example:- */
-const spacing = '8px'; 
-const mystyle =  
-`padding: ${spacing}; background-color: white; color: blue ; font-style:
-italic; border: 1px solid black dotted; font-size: 2em;`; 
+const spacing = '8px';
+const mystyle =
+    `padding: ${spacing}; background-color: white; color: blue ; font-style:
+italic; border: 1px solid black dotted; font-size: 2em;`;
 console.log('%cCode With Mayank', mystyle);
 
 
@@ -76,7 +76,7 @@ alert("alert message!!");    //alert() will generate an in-browser modal window 
 // if(deletePost)
 //     console.log("Your post has been deleted!")
 // else
-    // console.log("Deletion terminated")
+// console.log("Deletion terminated")
 
 // write function in 
 document.write("this is document write")
@@ -127,9 +127,9 @@ console.log("Data type: " + (typeof n1));
 n1 = 2;
 n2 = 5;
 
-console.log("n1 = "+n1);
-console.log("n2 = "+n2);
-console.log(n1**n2);
+console.log("n1 = " + n1);
+console.log("n2 = " + n2);
+console.log(n1 ** n2);
 
 console.log(n1++);
 console.log(++n1);
@@ -146,7 +146,7 @@ let num2 = 56.76;
 // String
 let str1 = "This is a string";
 let str2 = 'This is also a string';
-console.log(str1 +" "+ str2);
+console.log(str1 + " " + str2);
 console.log("Data type: " + (typeof str1));
 // We can use "" in str made using '' and '' in str made using " ".
 
@@ -169,7 +169,7 @@ console.log(str3);
 const pi = 3.14;
 // p1 = 54;    //not valid, as pi was defined as const varibale
 
-const arr0 = [1,5,2,6,3,8,66];
+const arr0 = [1, 5, 2, 6, 3, 8, 66];
 console.log(arr0);
 // const arr0 = [15,8,3,5]; //this is not allowed
 arr0.push(85);  //although arr0 is const we are not completely changing the arr0, but only adding another variable which is allowed
@@ -180,10 +180,10 @@ console.log(arr0);
 
 // Objects
 let myDict = {
-    yourName : 'harry',
-    age : 15,
-    youtube : "codeWithHarry",
-    "channel 2" : 'programmingWithHarry',
+    yourName: 'harry',
+    age: 15,
+    youtube: "codeWithHarry",
+    "channel 2": 'programmingWithHarry',
 }
 console.log(myDict);
 console.log(myDict.yourName);
@@ -310,24 +310,24 @@ var arr = [1, 2, 3, 4, 5, 6, 7];
 // }
 
 // for loop of modern javascript
-    //inside forEach we have to write a function 
-arr.forEach(function(element){
+//inside forEach we have to write a function 
+arr.forEach(function (element) {
     console.log(element);
 });
 
 // another type of for loop of modern javascript
-for(ele of arr){
+for (ele of arr) {
     console.log(ele);
 }
 
 let employee = {
-    name : 'Sid',
-    age : 25,
-    Country : "US",
-    Nationality : 'IN',
+    name: 'Sid',
+    age: 25,
+    Country: "US",
+    Nationality: 'IN',
 }
 // traversing an object
-for(key in employee){
+for (key in employee) {
     console.log(`${key} --> ${employee[key]}`)
 }
 
@@ -338,16 +338,16 @@ const ac = 0;
 
 // while and do while loops 
 let j = 0;
-while(j<4){
+while (j < 4) {
     console.log(`${j} is less than 4`);
-    j ++;
+    j++;
 }
 
 // runs 1st time irrespective of condition and then checks the condition
-do{
+do {
     console.log(`${j} is more than 0`);
     j--;
-} while (j>0);
+} while (j > 0);
 
 /* Type Conversion */
 let myVar;
@@ -365,7 +365,7 @@ console.log(date, (typeof date));
 date = String(date);
 console.log(date, (typeof date));
 
-let arr9 =  [1,2,3,4,5];
+let arr9 = [1, 2, 3, 4, 5];
 console.log(arr9.length, (typeof arr9));
 arr9 = String(arr9);
 console.log(arr9.length, (typeof arr9));
@@ -378,7 +378,7 @@ console.log(i.toString())
 let stri = Number("3434");  //valid
 stri = Number("343d4"); //NAN   //invalid
 stri = Number(true);   //1  //valid
-stri = Number([1,2,3,4,5,6,7,8,9]); //invalid
+stri = Number([1, 2, 3, 4, 5, 6, 7, 8, 9]); //invalid
 // console.log(stri, (typeof stri));
 
 stri = parseInt('85');
@@ -426,13 +426,13 @@ console.log(newarr.indexOf('first'));   //0
 console.log(newarr.indexOf('harry'));   //6
 console.log(newarr.indexOf('cherry'));  //-1
 
-newarr.splice(2,3); //starting from index 2, it will reomve 3 elements from array
+newarr.splice(2, 3); //starting from index 2, it will reomve 3 elements from array
 console.log(newarr);
 
 newarr.reverse()
 console.log(newarr);
 
-let newarr2 = [1,2,5,63,7];
+let newarr2 = [1, 2, 5, 63, 7];
 console.log(newarr);
 newarr = newarr.concat(newarr2);
 console.log(newarr);
@@ -451,6 +451,30 @@ console.log(arr2);
 console.log(Array.isArray(arr2));   //true
 console.log(Array.isArray('arr2')); //false
 
+// array of objects
+let arrOfObjects = [
+    {
+        naam: "apple",
+        type: "fruit",
+        price: 50
+    },
+    {
+        naam: "almond",
+        type: "dry fruit",
+        price: 500
+    },
+    {
+        naam: "bhindi",
+        type: "vegetable",
+        price: 30
+    }
+];
+console.log(arrOfObjects);
+console.log(typeof arrOfObjects);
+console.log(arrOfObjects[0].naam);
+console.log(arrOfObjects[1].price);
+console.log(arrOfObjects[2].type);
+
 
 // String Methods in JavaScript
 let myLovelyString = "Harry is a good boy good good Harry";
@@ -461,11 +485,11 @@ console.log(myLovelyString.endsWith("good")) //returns true or false
 console.log(myLovelyString.includes("good")) //returns true or false
 
 // console.log(myLovelyString.slice(1,4))   //slicing of string str.slice(m,n) means [m,n) ,where m and n are index values
-var substr1 = myLovelyString.slice(1,7);
-var substr2 = myLovelyString.substring(1,7);
+var substr1 = myLovelyString.slice(1, 7);
+var substr2 = myLovelyString.substring(1, 7);
 //both of the above works in same way, but .slice() is better as we can give neagtive values in it also
 
-var substr3 = myLovelyString.substr(2,3);   //also does the slicing but first arg is starting index and next argument is length of substring.
+var substr3 = myLovelyString.substr(2, 3);   //also does the slicing but first arg is starting index and next argument is length of substring.
 console.log(substr1);
 console.log(substr2);
 console.log(substr3);
@@ -542,7 +566,7 @@ otherDate.setMinutes(2);
 otherDate.setHours(1);
 otherDate.setSeconds(3);
 console.log(otherDate);
- 
+
 let currTime = new Date();
 console.log(currTime);
 currTime.toLocaleString();
@@ -578,7 +602,7 @@ let tn = document.getElementsByTagName('div')
 // createdElement2.innerText = "This is a created bold";
 // tn[0].replaceChild(createdElement2, createdElement);
 // removeChild(element); ---> removes an element
- 
+
 // Selecting using Query
 // sel = document.querySelector('.container')
 // console.log(sel)
@@ -622,11 +646,11 @@ let tn = document.getElementsByTagName('div')
 // function summ(a, b){
 //     return a+b;
 // }
-summ = (a,b)=>{
-    return a+b;
+summ = (a, b) => {
+    return a + b;
 }
 
-logKaro = ()=>{
+logKaro = () => {
     document.querySelectorAll('.container')[1].innerHTML = "<b> Set interval fired</b>"
     console.log("I am your log")
 }
