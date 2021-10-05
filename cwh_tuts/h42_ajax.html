@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AJAX tutorial</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <style>
+        p {
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container my-3">
+        <h1>Asynchronus Javascript and XML</h1>
+        <hr>
+        <div class="container">
+            <p>Ajax stands for Asynchronous JavaScript And XML. Ajax loads the data from the server and updating the
+                parts of a web page selectively without reloading the whole page.</p>
+
+            <h2>Introduction of AJAX:-</h2>
+            <p><strong>AJAX is a technique for creating faster, and more interactive web applications with the help of
+                    XML,
+                    HTML, CSS, and JavaScript. It is a web browser technology which is independent of web server
+                    software. AJAX use of the built-in browser XMLHttpRequest (XHR) objects to send and receive
+                    information to and
+                    from a web server asynchronously, in the background, without blocking the page or interfering with
+                    the user's experience.</strong> Ajax uses XHTML for the content, CSS for designing, along with
+                Document Object Model and JavaScript for
+                dynamic content display. Before AJAX technology, the web applications transmit information to and from
+                the server using synchronous requests. Due to this, if someone fills out a form, hit submit, and get
+                directed to a new page with new information from the server. But with AJAX, when we hit submit,
+                JavaScript will make a
+                request to the server, interpret the results, and update the current screen. <br><br>
+
+                <i> We can guess the popularity of AJAX, such that we hardly find an application that doesn't use Ajax
+                    to
+                    some extent. The example of Ajax-driven online applications are Gmail, Google Maps, YouTube,
+                    Facebook,
+                    and so many other applications.</i><br>
+            </p>
+            <h3>How Does AJAX Work?</h3>
+            <p> JavaScript and XML combine to make asynchronous updating happen through the use of something called an
+                XMLHttpRequest (XHR) object. When the user visits a web page which is designed using AJAX technology,
+                and a prescribed event occurs (a button, or fills out a form) the JavaScript creates an XMLHttpRequest
+                (XHR) object, which then transfers data in an XML format between a web browser and a web. The
+                XMLHttpRequest(XHR) object sends a request for updated page data to the web server, the server process
+                the request, a response is created at server-side and sent back to the browser, which then uses
+                JavaScript to process the response and display it on the screen as updated content.</p>
+
+            <h4>Summary:-</h4>
+            <p>The JavaScript automates the updating process, the request for updated content is formatted in XML to
+                make it understandable, and JavaScript again refreshes the relevant content for the user viewing the
+                page. Whereas the AJAX technique ignores extraneous page data and only handles requests for updated
+                information and the updated information itself. This shows the AJAX's effectiveness, as it makes the
+                websites and applications that use AJAX faster and more responsive to users.</p>
+        </div>
+        <div class="button my-3 mx-3">
+            <button type="button" id="fetchBtn" class="btn btn-primary">Fetch Data</button>
+            <button type="button" id="backupBtn" class="btn btn-success">Backup Data</button>
+        </div>
+
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+    <script src="/cwh_tuts/h42_ajax.js"></script>
+</body>
+
+</html>

@@ -8,13 +8,18 @@ const jsdom = require('jsdom'); //will load data or html and process it, i.e. it
 let args = minimist(process.argv);
 
 fs.readFile(args.source, "utf-8", function (err, data) {
-    let dom = new jsdom.JSDOM(data);
-    let doc = dom.window.document;
+    if (err == null) {
+        let dom = new jsdom.JSDOM(data);
+        let doc = dom.window.document;
 
-    let descr = doc.querySelectorAll('div.match-info > div.description');
-    // this will give us all those elements which is a div with class='description' and whose parent is a div with class='match-info'.
-    for (let i = 0; i < descr.length; i++) {
-        console.log(descr[i].textContent);
+        let descr = doc.querySelectorAll('div.match-info > div.description');
+        // this will give us all those elements which is a div with class='description' and whose parent is a div with class='match-info'.
+        for (let i = 0; i < descr.length; i++) {
+            console.log(descr[i].textContent);
+        }
+    } else {
+        console.log("Something went wrong!");
+        console.log(err);
     }
 });
 

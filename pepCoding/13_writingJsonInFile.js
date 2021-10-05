@@ -63,10 +63,12 @@ An intrinsic object that provides functions to convert JavaScript values to and 
 we do so becoz if we want back our JSO, then we can easily convert JSON into JSO (for working with JSO) using parse() method */
 
 let jsonData = JSON.stringify(teams);
-fs.writeFile(args.dest, jsonData, "utf-8", function(err, res){
+fs.writeFile(args.dest, jsonData, "utf-8", function(err){
     if(err){
         console.log(err);
     }else{
-        console.log("Successfully created teams.json");
+        console.log("File written successfully\n");
+        console.log("The written has the following contents:");
+        console.log(fs.readFileSync(args.dest, "utf8"));
     }
 })
