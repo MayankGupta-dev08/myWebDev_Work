@@ -5,11 +5,11 @@
         "matches": [
             {
                 "vs": "Australia",
-                "result": "win"
+                "result": "won"
             },
             {
                 "vs": "England",
-                "result": "win"
+                "result": "won"
             }
         ]
     },
@@ -33,7 +33,7 @@
         "matches": [
             {
                 "vs": "Australia",
-                "result": "win"
+                "result": "won"
             },
             {
                 "vs": "India",

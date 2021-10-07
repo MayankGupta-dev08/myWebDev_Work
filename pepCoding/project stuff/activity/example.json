@@ -1,0 +1,84 @@
+[
+    {
+        "Avenger": "Iron Man",
+        "Real name": "Tony Stark",
+        "age": 55,
+        "isMainHero": true,
+        "friends": [
+            "Tony",
+            "Bruce",
+            "Natasha"
+        ],
+        "address": {
+            "borough": "Manhatten",
+            "state": "NY city",
+            "Country": "USA"
+        }
+    },
+    {
+        "Avenger": "Captain America",
+        "Real name": "Steve Rogers",
+        "age": 500,
+        "isMainHero": true,
+        "friends": [
+            "Tony",
+            "Bruce",
+            "Natasha"
+        ],
+        "address": {
+            "borough": "Manhatten",
+            "state": "NY city",
+            "Country": "USA"
+        }
+    },
+    {
+        "Avenger": "Hulk",
+        "Real name": "Bruce Banner",
+        "age": 455,
+        "isMainHero": true,
+        "friends": [
+            "Tony",
+            "Bruce",
+            "Natasha"
+        ],
+        "address": {
+            "borough": "Manhatten",
+            "state": "NY city",
+            "Country": "USA"
+        }
+    },
+    {
+        "Avenger": "Thor",
+        "Real name": "Thor Odinson",
+        "age": 155,
+        "isMainHero": true,
+        "friends": [
+            "Tony",
+            "Bruce",
+            "Natasha",
+            "Steve"
+        ],
+        "address": {
+            "borough": "Manhatten",
+            "state": "NY city",
+            "Country": "USA"
+        }
+    },
+    {
+        "Avenger": "Black Widow",
+        "Real name": "Natasha Romanoff",
+        "age": 80,
+        "isMainHero": true,
+        "friends": [
+            "Tony",
+            "Bruce",
+            "Thor",
+            "Steve"
+        ],
+        "address": {
+            "borough": "Manhatten",
+            "state": "NY city",
+            "Country": "USA"
+        }
+    }
+]
