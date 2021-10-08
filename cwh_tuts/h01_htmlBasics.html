@@ -2,25 +2,28 @@
 
 <!DOCTYPE html> <!-- type of doc: html -->
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Here we write the description of the page">
-    <meta name="keywords" content="web devlopment, html, css, java script, mern, mean, react, nodeJs, mongoDb, express, angular, devops, aws">
+    <meta name="keywords"
+        content="web devlopment, html, css, java script, mern, mean, react, nodeJs, mongoDb, express, angular, devops, aws">
     <meta name="robots" content="INDEX, FOLLOW">
     <title>My First HTML Page</title>
 
     <!-- this is how we link an external css file to our html file -->
     <link rel="stylesheet" href="new.css">
-    
+
     <!-- this is how we link an external js file to our html file -->
     <script src="new.js"></script>
 
 </head>
+
 <body>
     <!-- we have 6 different pairs of heading tags  <h1></h1> to <h6></h6> -->
-    <h1>Heading 1</h1>  
+    <h1>Heading 1</h1>
     <h2>Heading 2</h2>
     <h3>Heading 3</h3>
     <h4>Heading 4</h4>
@@ -28,16 +31,67 @@
     <h6>Heading 6</h6>
 
     <!-- we have paragraph tag also <p></p> in which we can use Lorem55 to insert 55 dummy words to fill our para-->
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis beatae soluta, voluptas repellat quas eveniet error voluptatum. Blanditiis asperiores inventore harum natus a, quos quaerat provident tempore non, odio sequi!</p>
-    <hr>    <!-- <hr> for horizontal rule and <br> for line break-->
-    <p>Lorem ipsum dolor sit amet,<strong> this is STRONG</strong> consectetur adipisicing elit. Natus fugiat, minima fuga <em>this is EMPHASIZED</em> perspiciatis modi harum odit ex at ipsa inventore rerum consectetur molestias aperiam consequuntur ad impedit mollitia, maiores vero quae ipsum quisquam facilis quis sequi. <b>This is BOLD, but we should use strong insted of this always.</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt non consequatur, officiis voluptatibus praesentium modi dolores porro quos itaque laudantium sed dignissimos dolore aliquam ducimus deleniti placeat ex culpa voluptatum. Nostrum ducimus at nihil. <br>Possimus architecto laudantium perspiciatis. Dicta nobis vel animi enim voluptatibus recusandae ea nostrum vitae eveniet quibusdam eum magni, sint, cupiditate accusantium illum tempore unde deleniti assumenda! Nemo ea quod accusamus laboriosam quidem reiciendis quae totam exercitationem suscipit beatae hic, id odit neque, quasi autem itaque iure consequatur quo eaque nam? Soluta earum consequatur iusto exercitationem nam, odit fuga fugit eaque laborum provident deleniti, officia excepturi, rerum odio assumenda! Nesciunt molestiae sunt, magni eius eaque, molestias veritatis dicta necessitatibus quia vel laudantium. Architecto sapiente iure dignissimos, aliquid quisquam tempore repudiandae hic mollitia quo velit, rerum nemo, ut incidunt cumque. Alias labore error sequi placeat soluta eveniet a aliquam sit quia nam deserunt provident tempora molestias maxime earum fuga, aspernatur est nobis! Pariatur officia nam eaque fugiat error, debitis autem repellat velit voluptas recusandae nobis repellendus sed facere, reprehenderit expedita placeat perspiciatis excepturi incidunt, modi nesciunt ea voluptate dolorum? Quidem possimus facere dolor tempore nesciunt nulla nostrum magnam asperiores in porro! Dolores esse est corrupti corporis vero perspiciatis. <i>This is ITALICS, we should prefer emphasized instead.</i> deserunt totam, voluptatibus autem vero distinctio rerum! Magni quibusdam perferendis quam minima quasi veritatis reiciendis nobis assumenda dolore libero, iure odio ratione est? Accusantium nam cumque laborum voluptatum exercitationem velit dignissimos cupiditate aut ipsa at maiores porro nobis dolor, perspiciatis rem quae! Dolore expedita a deserunt, temporibus est ipsum asperiores quas tenetur quibusdam fugit eius cum ut, mollitia ipsa! Quam iusto repudiandae est?</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis beatae soluta, voluptas repellat quas eveniet
+        error voluptatum. Blanditiis asperiores inventore harum natus a, quos quaerat provident tempore non, odio sequi!
+    </p>
+    <hr> <!-- <hr> for horizontal rule and <br> for line break-->
+    <p><strong> this is STRONG</strong>
+    <p><b>This is BOLD, but we should use strong insted of this always.</b></p>
+    <p><em>this is EMPHASIZED</em></p>
+    <p><i>This is italicised.</i></p>
+    <p><u>this is underlined content.</u></p>
+    <p><big>this is bigger than usual content in pTag.</big></p>
+    <p><small>this is samller than usual content in pTag.</small></p>
+    <p>Now we will be adding a break inside a pTag using <br>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Deleniti aspernatur odio delectus.</p>
+    <p><strong>Chemical formula of carbon dioxide: </strong>C0<sub>2</sub></p>
+    <p><strong>Reaction of carbon dioxide: </strong>C + 0<sub>2</sub> &rarr; C0<sub>2</sub></p>
+    <p><strong>Pythagoras Formula: </strong> h<sup>2</sup> = p<sup>2</sup> + b<sup>2</sup></p>
+    <p><strike>Strike through</strike></p>
+
+    <pre>
+"If we want to print something as it is without it being automatically formated by html than we have to use the pre tag."
+// Java program to check whether a number is prime or not using recursion
+class checkPrime {
+
+    static int i = 2;
+    
+    // Function check whether a number is prime or not
+    public static boolean isPrime(int n) {
+        if (n == 0 || n == 1) {
+            return false;
+        }
+        
+        // Checking Prime
+        if (n == i)
+            return true;
+        
+        // Base cases
+        if (n % i == 0) {
+            return false;
+        }
+        i++;
+        return isPrime(n);
+    }
+
+    public static void main(String[] args) {
+        if (isPrime(35)) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");
+        }
+    }
+}
+    </pre>
+
     <!-- every paragraph we write using <p></p> gets inserted in a new line automatically. we can use <br> to add a new line within a paragraph.  -->
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis explicabo consequatur nesciunt!</p>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita repellendus id dolorum accusamus perspiciatis sequi iure earum in esse illum. Iusto enim rem provident facilis ipsa quas et incidunt commodi?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita repellendus id dolorum accusamus perspiciatis
+        sequi iure earum in esse illum. Iusto enim rem provident facilis ipsa quas et incidunt commodi?</p>
 
 
     <!-- for links and images -->
-        <!-- for links we use anchor tag <a></a> , href attribute is used to insert the link and target attribute for opening that link in a new tab-->
+    <!-- for links we use anchor tag <a></a> , href attribute is used to insert the link and target attribute for opening that link in a new tab-->
     <a href="https://google.co.in" target="_blank">Google</a><br>
     <a href="https://facebook.com" target="_blank">Facebook</a><br>
     <a href="https://linkedin.com" target="_blank">Linkedin</a><br>
@@ -68,7 +122,7 @@
         </ul>
         <li>this is third item of my ul</li>
     </ul>
-    
+
     <!-- ordered list -->
     <h4>Ordered list</h4>
     <ol title="Ordered list" type="1">
@@ -143,9 +197,9 @@
         </div>
         <br>
         <div>
-            Gender: Male <input type="radio" name="myGender"> 
-                    Female <input type="radio" name="myGender"> 
-                    Others <input type="radio" name="myGender">
+            Gender: Male <input type="radio" name="myGender">
+            Female <input type="radio" name="myGender">
+            Others <input type="radio" name="myGender">
         </div>
         <br>
         <div>
@@ -171,25 +225,29 @@
             <input type="reset" value="Reset Form">
         </div>
     </form>
-    
+
     <!-- block tags (takes whole space of the block and next thing comes in next line) - li, ul, ol, div, p,  -->
     <!-- inline tags (takes only that much space which is required, next thing will continue in same line) - img, span, strong, em  -->
-    <p>This is a paragraph.</p> <p>This is a paragraph.</p>
-    
+    <p>This is a paragraph.</p>
+    <p>This is a paragraph.</p>
+
     <hr>
     <h4>Ids and Classes</h4>
-    <p>The ID is an identifier which must be unique in the whole HTML document. It is used to find an element while linking, scripting, or styling. Whereas, Classes allow CSS and JavaScript to select and access specific elements.</p>
-    <p>One element can have one id and no two elements can have same id, one element can have any number of classes with help of space we can assign many classes to one element and one class can be assigned to many elements.
+    <p>The ID is an identifier which must be unique in the whole HTML document. It is used to find an element while
+        linking, scripting, or styling. Whereas, Classes allow CSS and JavaScript to select and access specific
+        elements.</p>
+    <p>One element can have one id and no two elements can have same id, one element can have any number of classes with
+        help of space we can assign many classes to one element and one class can be assigned to many elements.
         '.' symbol is used for classes
         '#' symbol is used for ids </p>
 
     <div id="mainBox" class="redBg BlackBorder">
         this is mainBox.
-    </div> 
+    </div>
     <span class="redBg"></span>
-    
-    <span class="blueBg"></span>    <!-- span.blueBg -->
-    <span id="spanId"></span>       <!-- span#spanId -->
+
+    <span class="blueBg"></span> <!-- span.blueBg -->
+    <span id="spanId"></span> <!-- span#spanId -->
     <!-- Emmet takes div tag as default  -->
     <div class="whiteBg"></div>
 
@@ -202,7 +260,7 @@
     <hr>
     <h3>HTML Entities</h3>
     <div>
-        <p>This is a paragraph.      This is also a paragraph</p>   <!-- Extra spaces will be removed by html -->
+        <p>This is a paragraph. This is also a paragraph</p> <!-- Extra spaces will be removed by html -->
         <!-- to make visible certain characters or spaces we make use of html entities -->
         <p>This is an example of using html entities and inserting extra &nbsp; &nbsp; &nbsp; spaces.</p>
         <p>paragraph symbol is written like this &lt;p&gt; </p>
@@ -215,23 +273,66 @@
     <!-- semantic elements in html -->
     <hr>
     <a href="https://developer.mozilla.org/en-US/docs/Glossary/Semantics" target="_blank">Semantic elements in html</a>
-    
+
     <h3>Semantics</h3>
-    <p>In programming, Semantics refers to the meaning of a piece of code — for example "what effect does running that line of JavaScript have?", or "what purpose or role does that HTML element have" (rather than "what does it look like?".)
+    <p>In programming, Semantics refers to the meaning of a piece of code — for example "what effect does running that
+        line of JavaScript have?", or "what purpose or role does that HTML element have" (rather than "what does it look
+        like?".)
 
-        <h5>Semantics in JavaScript</h5>
-        In JavaScript, consider a function that takes a string parameter, and returns an &lt;li&gt; element with that string as its textContent. Would you need to look at the code to understand what the function did if it was called build('Peach'), or createLiWithContent('Peach')?
-        
-        <h5>Semantics in CSS</h5>
-        In CSS, consider styling a list with li elements representing different types of fruits. Would you know what part of the DOM is being selected with div > ul > li, or .fruits__item?
-        
-        <h5>Semantics in HTML</h5>
-        In HTML, for example, the &lt;h1&gt; element is a semantic element, which gives the text it wraps around the role (or meaning) of "a top level heading on your page."</p>
+    <h5>Semantics in JavaScript</h5>
+    In JavaScript, consider a function that takes a string parameter, and returns an &lt;li&gt; element with that string
+    as its textContent. Would you need to look at the code to understand what the function did if it was called
+    build('Peach'), or createLiWithContent('Peach')?
 
-        <details>
-            <summary>I have keys but no doors. I have space but no room. You can enter but can’t leave. What am I?</summary>
-            A keyboard. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum vero quas tenetur omnis neque magnam adipisci odit, debitis magni in voluptates sequi pariatur consequatur consectetur impedit ex iure laborum dignissimos?Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae similique soluta corrupti commodi consectetur? Tempore enim praesentium quidem alias in, placeat, laborum a necessitatibus eaque minus iure sequi non odit? Ea, aut eius distinctio eum architecto iste incidunt nisi vitae obcaecati. Magnam assumenda voluptatum dolorem magni, numquam alias molestiae reprehenderit aut aperiam cumque ratione odio eos maiores veniam ipsa perferendis nesciunt veritatis porro tempore officia tenetur vitae? Blanditiis sint fugiat maxime provident, sunt impedit repudiandae at laudantium. Deleniti at quam, quasi, illum delectus dolores totam minima nostrum aut quidem excepturi iste unde officia. Voluptas labore dolor unde sunt ullam itaque vel deleniti ipsa! Ullam ratione fugiat suscipit placeat perspiciatis harum quam, unde facere provident porro totam sed labore assumenda laborum possimus voluptatibus quisquam! Ea voluptatum dolorem sit delectus dicta. Maxime, sapiente illo delectus ad reiciendis quia aperiam unde ab, alias amet itaque harum voluptate maiores, omnis atque suscipit commodi similique cumque tenetur non odio saepe? Nesciunt ducimus, dignissimos iste, voluptatibus quisquam delectus quos eius sequi blanditiis veniam expedita velit quae facere aperiam, numquam consequatur commodi modi omnis aliquid ullam repudiandae unde saepe! Eum omnis quae quasi commodi blanditiis aliquam a odio voluptates, placeat impedit? Dolor iste, soluta temporibus quibusdam tenetur obcaecati, iure debitis fuga quidem rerum qui nesciunt explicabo quasi sed provident quaerat quisquam minus atque animi sunt. Commodi repudiandae, consequuntur minus natus sunt minima nemo omnis similique aliquam ut qui assumenda alias animi. Ut commodi repellendus amet accusamus, culpa, neque nobis facere, voluptate blanditiis veritatis iure omnis distinctio a libero eveniet at harum. Dolor similique ipsum eos quae error id numquam provident sapiente atque fugit! Consequuntur accusamus blanditiis voluptatem, hic deserunt voluptas soluta dolor eligendi voluptate sint? Excepturi tenetur exercitationem officiis inventore voluptates, magni odit possimus, error, hic deleniti doloribus nostrum nobis ullam architecto vel. Deleniti praesentium repudiandae beatae quam, ex veritatis, ducimus commodi omnis aut rem minima excepturi itaque sapiente voluptatem explicabo labore alias ipsa repellat nam, perferendis assumenda officia. Voluptas doloribus blanditiis omnis sequi. Dolore maxime provident eos. Dignissimos, quo adipisci, eius magnam nostrum sunt ipsa vel neque eaque blanditiis dolores saepe voluptas repellendus nesciunt aspernatur quisquam quam architecto soluta reiciendis impedit voluptatem. Sunt magni eius in suscipit voluptatem error aliquam ipsam veniam totam iste minima perferendis ratione, ad, consequuntur laudantium quidem nobis vel! Enim expedita excepturi ex illo sunt voluptatem distinctio? Perspiciatis reiciendis optio voluptatem pariatur, laboriosam totam, quos dicta fugiat molestias nostrum dignissimos ab doloremque quae velit quas mollitia corrupti, atque dolores odio minima exercitationem nulla error necessitatibus. Repellendus possimus nulla, omnis dolores delectus, porro repudiandae unde doloribus aliquam facere libero adipisci cum! A vero accusantium, quae labore officiis sunt ducimus neque accusamus dolorem ipsam doloremque ipsum numquam alias in, sed quam vitae! Porro optio rerum libero ad sunt officia provident, facere odio nostrum ipsam perspiciatis nisi odit. Laboriosam unde magni eius obcaecati harum aliquam quae, in nihil? Adipisci minus sunt magnam excepturi cupiditate voluptate et nihil deleniti. Mollitia repellat aperiam, perferendis aliquam dolorem nostrum amet sed, suscipit pariatur beatae id optio vero consequuntur ducimus!
-        </details>
-          
+    <h5>Semantics in CSS</h5>
+    In CSS, consider styling a list with li elements representing different types of fruits. Would you know what part of
+    the DOM is being selected with div > ul > li, or .fruits__item?
+
+    <h5>Semantics in HTML</h5>
+    In HTML, for example, the &lt;h1&gt; element is a semantic element, which gives the text it wraps around the role
+    (or meaning) of "a top level heading on your page."</p>
+
+    <details>
+        <summary>I have keys but no doors. I have space but no room. You can enter but can’t leave. What am I?</summary>
+        A keyboard. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum vero quas tenetur omnis neque magnam
+        adipisci odit, debitis magni in voluptates sequi pariatur consequatur consectetur impedit ex iure laborum
+        dignissimos?Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae similique soluta corrupti commodi
+        consectetur? Tempore enim praesentium quidem alias in, placeat, laborum a necessitatibus eaque minus iure sequi
+        non odit? Ea, aut eius distinctio eum architecto iste incidunt nisi vitae obcaecati. Magnam assumenda voluptatum
+        dolorem magni, numquam alias molestiae reprehenderit aut aperiam cumque ratione odio eos maiores veniam ipsa
+        perferendis nesciunt veritatis porro tempore officia tenetur vitae? Blanditiis sint fugiat maxime provident,
+        sunt impedit repudiandae at laudantium. Deleniti at quam, quasi, illum delectus dolores totam minima nostrum aut
+        quidem excepturi iste unde officia. Voluptas labore dolor unde sunt ullam itaque vel deleniti ipsa! Ullam
+        ratione fugiat suscipit placeat perspiciatis harum quam, unde facere provident porro totam sed labore assumenda
+        laborum possimus voluptatibus quisquam! Ea voluptatum dolorem sit delectus dicta. Maxime, sapiente illo delectus
+        ad reiciendis quia aperiam unde ab, alias amet itaque harum voluptate maiores, omnis atque suscipit commodi
+        similique cumque tenetur non odio saepe? Nesciunt ducimus, dignissimos iste, voluptatibus quisquam delectus quos
+        eius sequi blanditiis veniam expedita velit quae facere aperiam, numquam consequatur commodi modi omnis aliquid
+        ullam repudiandae unde saepe! Eum omnis quae quasi commodi blanditiis aliquam a odio voluptates, placeat
+        impedit? Dolor iste, soluta temporibus quibusdam tenetur obcaecati, iure debitis fuga quidem rerum qui nesciunt
+        explicabo quasi sed provident quaerat quisquam minus atque animi sunt. Commodi repudiandae, consequuntur minus
+        natus sunt minima nemo omnis similique aliquam ut qui assumenda alias animi. Ut commodi repellendus amet
+        accusamus, culpa, neque nobis facere, voluptate blanditiis veritatis iure omnis distinctio a libero eveniet at
+        harum. Dolor similique ipsum eos quae error id numquam provident sapiente atque fugit! Consequuntur accusamus
+        blanditiis voluptatem, hic deserunt voluptas soluta dolor eligendi voluptate sint? Excepturi tenetur
+        exercitationem officiis inventore voluptates, magni odit possimus, error, hic deleniti doloribus nostrum nobis
+        ullam architecto vel. Deleniti praesentium repudiandae beatae quam, ex veritatis, ducimus commodi omnis aut rem
+        minima excepturi itaque sapiente voluptatem explicabo labore alias ipsa repellat nam, perferendis assumenda
+        officia. Voluptas doloribus blanditiis omnis sequi. Dolore maxime provident eos. Dignissimos, quo adipisci, eius
+        magnam nostrum sunt ipsa vel neque eaque blanditiis dolores saepe voluptas repellendus nesciunt aspernatur
+        quisquam quam architecto soluta reiciendis impedit voluptatem. Sunt magni eius in suscipit voluptatem error
+        aliquam ipsam veniam totam iste minima perferendis ratione, ad, consequuntur laudantium quidem nobis vel! Enim
+        expedita excepturi ex illo sunt voluptatem distinctio? Perspiciatis reiciendis optio voluptatem pariatur,
+        laboriosam totam, quos dicta fugiat molestias nostrum dignissimos ab doloremque quae velit quas mollitia
+        corrupti, atque dolores odio minima exercitationem nulla error necessitatibus. Repellendus possimus nulla, omnis
+        dolores delectus, porro repudiandae unde doloribus aliquam facere libero adipisci cum! A vero accusantium, quae
+        labore officiis sunt ducimus neque accusamus dolorem ipsam doloremque ipsum numquam alias in, sed quam vitae!
+        Porro optio rerum libero ad sunt officia provident, facere odio nostrum ipsam perspiciatis nisi odit. Laboriosam
+        unde magni eius obcaecati harum aliquam quae, in nihil? Adipisci minus sunt magnam excepturi cupiditate
+        voluptate et nihil deleniti. Mollitia repellat aperiam, perferendis aliquam dolorem nostrum amet sed, suscipit
+        pariatur beatae id optio vero consequuntur ducimus!
+    </details>
+
 </body>
+
 </html>

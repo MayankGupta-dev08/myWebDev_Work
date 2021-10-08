@@ -58,7 +58,7 @@ function getMatchDetails(matchHtml) {
                 let strikeRate = $(allColsForARow[7]).text().trim();
 
                 console.log(`${playerName}, ${oppTeamName}, ${runsScored}, ${ballsTaken}, ${fours}, ${sixes}, ${strikeRate}`);
-                // processPlayer(playerName, teamName, matchName, venue, date, result, oppTeamName, runsScored, ballsTaken, fours, sixes, strikeRate)
+                processPlayer(playerName, teamName, matchName, venue, date, result, oppTeamName, runsScored, ballsTaken, fours, sixes, strikeRate)
             }
         }
     }
@@ -88,7 +88,7 @@ function processPlayer(playerName, teamName, matchName, venue, date, result, opp
         "Result": result
     }
     playerDataJson.push(playerObj);
-    writeExcelFronJSON(playerObj, playerName, playerFilePath);
+    writeExcelFronJSON(playerDataJson, playerName, playerFilePath);
 }
 
 function dirCreator(dirPath) {
