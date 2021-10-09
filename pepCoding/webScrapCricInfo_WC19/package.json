@@ -1,0 +1,22 @@
+{
+  "name": "webScrapCricInfo_WC19",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.22.0",
+    "excel4node": "^1.7.2",
+    "fs": "0.0.1-security",
+    "jsdom": "^18.0.0",
+    "minimist": "^1.2.5",
+    "path": "^0.12.7",
+    "pdf-lib": "^1.16.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}
