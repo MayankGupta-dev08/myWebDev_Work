@@ -1,0 +1,23 @@
+{
+    "name": "activity_2",
+    "version": "1.0.0",
+    "description": "",
+    "main": "1_Dealing_With_modules.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bluebird": "^3.7.2",
+        "imap": "^0.8.19",
+        "jsdom": "^18.0.0",
+        "mailparser": "^3.4.0",
+        "minimist": "^1.2.5",
+        "puppeteer-extra": "^3.2.3",
+        "puppeteer-extra-plugin-adblocker": "^2.12.0",
+        "puppeteer-extra-plugin-anonymize-ua": "^2.3.3",
+        "puppeteer-extra-plugin-stealth": "^2.9.0",
+        "puppeteer-extra-plugin-user-preferences": "^2.3.1"
+    }
+}
