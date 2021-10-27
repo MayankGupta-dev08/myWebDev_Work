@@ -130,8 +130,7 @@ async function addModerator(ctab, moderatorName) {
     await ctab.waitForSelector("input#moderator", { visible: true });
     await ctab.type("input#moderator", moderatorName, { delay: 30 });
     await ctab.keyboard.press("Enter");
-
-    await ctab.waitForTimeout(1000);
+    await ctab.waitForTimeout(3000);
 }
 
 run();
