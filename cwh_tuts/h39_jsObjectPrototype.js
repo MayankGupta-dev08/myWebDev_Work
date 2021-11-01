@@ -38,7 +38,7 @@ using constructor function, we can add our own prototype to the object apart fro
 */
 
 
-// Object literal : Object.prototype
+// creating object using Object literal whose parent is Object.prototype, here it will inherit few methods and properties from Object.prototype which will be present under __proto__ property 
 let obj = {
     name: "harry",
     channel: "Code With Harry",
@@ -48,24 +48,27 @@ console.log(obj);
 console.log(obj.prototype);
 
 
-// constructor function to define our object
-function Obj(givenName, givenAge){
+// creating a constructor function naming Obj to define our object, so now this will be the parent of our new object, this time also we will have a __proto__ but it will be the one which will get thru our constructor function.
+// the parent of constructor function will be object.prototype thru which we will get the another __proto__
+function Obj(givenName, givenAge) {
     this.name = givenName;
     this.age = givenAge;
 }
 
 // adding functions in our own prototype of object defined using constructor
-Obj.prototype.getName = function (){
+Obj.prototype.getName = function () {
     return this.name;
 }
 
-Obj.prototype.setName = function (newName){
+// adding functions in our own prototype of object defined using constructor
+Obj.prototype.setName = function (newName) {
     this.name = newName;
 }
 
 // creating a new object using constructor
 let obj2 = new Obj("Rohan Das", 15);
 obj2.getName();
+
 console.log(obj2);
 console.log(obj2.prototype);
 console.log(Obj.prototype);
@@ -74,7 +77,7 @@ obj2.setName("shubh");
 console.log(obj2);
 
 
-/* 
+/*
 PS D:\Mayank\Coding\WebDevelopment\myWebDev_work\cwh_tuts> node .\h39_objectPrototypeAndInheritance.js
 This is tutorial 28
 { name: 'harry', channel: 'Code With Harry', address: 'Mars' }
