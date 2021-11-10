@@ -26,3 +26,11 @@ try {
 } finally {
     console.log("Finally we will run this")
 }
+
+
+/* Types of errors:
+    TypeError = occurs when a variable or parameter is not of a valid type.
+    SyntaxError = occurs when there is an error in syntax.
+    ReferenceError = occurs when there is an invalid reference.
+    EvalError = occurs when there is an error in global function.
+    RangeError = occurs when a numeric variable or parameter is outside of its valid range. */
