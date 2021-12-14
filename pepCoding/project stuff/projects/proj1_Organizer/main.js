@@ -1,8 +1,6 @@
-// since we are not using minimist or any other module and directly taking inputs using process.argv, it will give us all inputs in form of string so if we are expecting any number than we have to use parseInt() for it.
-
 // npm install path
-// node main.js tree "D:\Mayank\Coding\WebDevelopment\myWebDev_work\pepCoding\project stuff\Temp"
-// node main.js organize "D:\Mayank\Coding\WebDevelopment\myWebDev_work\pepCoding\project stuff\Temp"
+// node main.js tree 
+// node main.js organize 
 // node main.js help
 
 const fs = require('fs');
@@ -10,6 +8,7 @@ const path = require('path');
 const chalk = require('chalk');
 
 const inputArray = process.argv.slice(2);
+// since we are not using minimist or any other module and directly taking inputs using process.argv, it will give us all inputs in form of string so if we are expecting any number than we have to use parseInt() for it.
 // console.log(inputArray);
 
 fileTypes = {
