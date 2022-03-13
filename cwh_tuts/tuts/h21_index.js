@@ -1,5 +1,7 @@
-// Javascript is a dynamically typed language
 // Java is a static language
+// Javascript is a dynamically typed language
+// JavaScript is a single threaded synchronous language
+// JavaScript is a loosely/weakly typed scripting language
 
 // 1. Ways to print in JavaScript
 console.log("Hello World");
