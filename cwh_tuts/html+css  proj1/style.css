@@ -1,0 +1,131 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background: url(img/dark-1839088_1920.jpg);
+    height: 2500px;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.left {
+    /* border: 2px solid red; */
+    display: inline-block;
+    position: fixed;
+    left: 34px;
+    top: 20px;
+    width: 8%;
+}
+
+.mid {
+    /* border: 2px solid blue; */
+    display: block;
+    width: 50%;
+    margin: 20px auto;
+}
+
+.right {
+    /* border: 2px solid yellow; */
+    display: inline-block;
+    position: fixed;
+    right: 34px;
+    top: 20px;
+    width: 2%;
+}
+
+.navBar li {
+    display: inline-block;
+    font-size: 18px;
+}
+
+.navBar li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 31px;
+    align-items: center;
+}
+
+.navBar li a:hover {
+    color: dodgerblue;
+    text-decoration: underline;
+}
+
+.navBar li a.active {
+    color: greenyellow;
+}
+
+.left img {
+    width: 100%;
+}
+
+.left div {
+    font-size: 150%;
+    text-align: center;
+    line-height: 22px;
+}
+
+.btn {
+    filter: invert(100%);
+}
+
+.btn img {
+    width: 100%;
+}
+
+.btn:hover {
+    border: 2px solid goldenrod;
+    border-radius: 30px;
+}
+
+.container {
+    border: 2px solid white;
+    color: crimson;
+    display: inline-block;
+    position: fixed;
+    top: 20%;
+    margin: 133px 55px;
+    padding: 26px 35px;
+    width: 25%;
+    border-radius: 30px;
+}
+
+.form-group input {
+    border: 2px solid silver;
+    text-align: justify;
+    display: block;
+    width: 289px;
+    margin: 6px 1px;
+    padding: 7px 5px;
+    font-size: 15px;
+    border-radius: 12px;
+}
+
+.buttn {
+    margin: 8px 2px;
+    background-color: black;
+    color: white;
+    padding: 4px 8px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.container2 {
+    display: inline-block;
+    border: 2px solid white;
+    border-radius: 30px;
+    color: goldenrod;
+    position: fixed;
+    margin: 0px 32px;
+    right: 100px;
+    padding: 3px 44px;
+    width: 25%;
+    top: 40%;
+    font-size: 200%;
+}
+
+.headin {
+    line-height: 16px;
+    margin-block-start: 16px;
+    margin-block-end: 20px;
+}
