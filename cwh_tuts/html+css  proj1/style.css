@@ -21,6 +21,9 @@ body {
     display: block;
     width: 50%;
     margin: 20px auto;
+    position: fixed;
+    top: 0px;
+    left: 500px;
 }
 
 .right {

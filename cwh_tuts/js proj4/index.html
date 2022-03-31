@@ -14,16 +14,20 @@
 </head>
 
 <body>
-  <div id="success" class="alert alert-success alert-dismissible fade" role="alert">
+
+  <!-- dismissable success alert -->
+  <div id="success" class="alert alert-success alert-dismissible fade show" role="alert">
     <strong>Success!</strong> Your travel request has been successfully submitted to us. We'll surely get back to you
     soon!
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>
-  <div id="failure" class="alert alert-danger alert-dismissible fade" role="alert">
+  <!-- dismissable failure alert -->
+  <div id="failure" class="alert alert-danger alert-dismissible fade show" role="alert">
     <strong>Something went wrong!</strong> Your travel request has not been sent to use due to some errors. Please try
     again!
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>
+
   <div class="container my-3">
     <h1>Mayank Travels Help Desk</h1>
     <form>
@@ -31,48 +35,69 @@
         <label for="username" class="form-label">Username</label>
         <input type="text" class="form-control" id="username" aria-describedby="usernameHelp"
           placeholder="Enter your username">
-        <div id="usernameHelp" class="form-text text-muted invalid-feedback">Your username must be 2-10 characters long
-          and should not start with a
-          number.</div>
+        <div class="form-text valid-feedback">Your username looks good!</div>
+        <div id="usernameHelp" class="form-text invalid-feedback">Your username must be 5-10 characters long
+          and should start with an alphabet and not a number.</div>
       </div>
-      <form>
-        <div class="mb-3">
-          <label for="email" class="form-label">Email address</label>
-          <input type="text" class="form-control" id="email" aria-describedby="emailHelp"
-            placeholder="Enter your email address">
-          <div id="emailHelp" class="form-text text-muted invalid-feedback">We'll never share your email with anyone
-            else.</div>
-        </div>
-        <div class="mb-3">
-          <label for="phoneNumber" class="form-label">Phone Number</label>
-          <input type="text" class="form-control" id="phoneNumber" aria-describedby="phoneNumHelp"
-            placeholder="Enter your phone number">
-          <div id="phoneNumHelp" class="form-text text-muted invalid-feedback">Your phone number must be 10 digit long.
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="text" class="form-control" id="email" aria-describedby="emailHelp"
+          placeholder="Enter your email address">
+        <div class="form-text valid-feedback">Looks good! We'll never share your email with anyone else.</div>
+        <div id="emailHelp" class="form-text invalid-feedback">Please provid a valid email.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="phoneNumber" class="form-label">Phone Number</label>
+        <input type="text" class="form-control" id="phoneNumber" aria-describedby="phoneNumHelp"
+          placeholder="Enter your phone number">
+        <div class="form-text valid-feedback">Looks good! We won't share your phone number. </div>
+        <div id="phoneNumHelp" class="form-text invalid-feedback">Your phone number must be 10 digit long.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="car" class="form-label">Select your travelling car</label>
+        <select class="form-select" id="car" aria-describedby="carHelp">
+          <option disabled selected value="">Choose one car</option>
+          <option>Hyundai Venue</option>
+          <option>Hyundai Creta</option>
+          <option>Fortuner</option>
+          <option>Maruti Vitara Brezza</option>
+          <option>Mahindra XUV700</option>
+          <option>Kia Sonet</option>
+        </select>
+        <div class="form-text valid-feedback">Looks good!</div>
+        <div id="carHelp" class="form-text invalid-feedback">You must select one car.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="address">Enter your address</label>
+        <textarea class="form-control" name="address" id="address" rows="3"></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Any other message...........</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+
+      <!-- <div class="mb-3">
+        <div class="form-check">
+          <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3"
+            aria-describedby="invalidCheck3Feedback" required>
+          <label class="form-check-label" for="invalidCheck3">
+            Agree to terms and conditions
+          </label>
+          <div id="invalidCheck3Feedback" class="invalid-feedback">
+            You must agree before submitting.
           </div>
         </div>
-        <div class="mb-3">
-          <label for="car">Select your travelling car</label>
-          <select class="form-select" id="car">
-            <option>Hyundai Venue</option>
-            <option>Hyundai Creta</option>
-            <option>Fortuner</option>
-            <option>Maruti Vitara Brezza</option>
-            <option>Mahindra XUV700</option>
-            <option>Kia Sonet</option>
-          </select>
-        </div>
-        <div class="mb-3">
-          <label for="address">Enter your address</label>
-          <textarea class="form-control" name="address" id="address" rows="3"></textarea>
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">Any other message...........</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-        <div class="d-grid gap-2">
-          <button class="btn btn-outline-primary" type="submit">Submit</button>
-        </div>
-      </form>
+      </div> -->
+
+      <div class="d-grid gap-2">
+        <button class="btn btn-outline-primary" id="submit">Submit</button>
+      </div>
+    </form>
   </div>
 
 
