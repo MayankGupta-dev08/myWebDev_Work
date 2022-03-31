@@ -3,6 +3,8 @@ console.log("form validation js file included");
 const username = document.getElementById("username");
 const email = document.getElementById("email");
 const phoneNumber = document.getElementById("phoneNumber");
+const car = document.getElementById("car");
+const address = document.getElementById("address");
 const submit = document.getElementById("submit");
 const success = document.getElementById("success");
 const failure = document.getElementById("failure");
@@ -13,6 +15,14 @@ failure.style.display = "none";
 let validEmail = false;
 let validUser = false;
 let validPhone = false;
+let validCar = false;
+let validAddress = false;
+
+if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+  console.info("This page is reloaded");
+  document.getElementById('myForm').reset();
+}
+
 
 username.addEventListener('blur', function () {
   console.log("usename is blurred");
@@ -68,16 +78,44 @@ phoneNumber.addEventListener('blur', function () {
   }
 });
 
+car.addEventListener('blur', function () {
+  const val = car.options[car.selectedIndex].value;
+  console.log(val);
+  if (val === "") {
+    car.classList.add("is-invalid");
+    car.classList.remove("is-valid");
+    validCar = false;
+  } else {
+    car.classList.add("is-valid");
+    car.classList.remove("is-invalid");
+    validCar = true;
+  }
+});
+
+address.addEventListener('blur', function () {
+  if (address.value === "") {
+    address.classList.add("is-invalid");
+    address.classList.remove("is-valid");
+    validAddress = false;
+  } else {
+    address.classList.add("is-valid");
+    address.classList.remove("is-invalid");
+    validAddress = true;
+  }
+});
+
 submit.addEventListener('click', (e) => {
   e.preventDefault();
   console.log("submit button is clicked");
 
-  if (validUser && validPhone && validEmail) {
-    console.log("All the 3 things a valid. Submitting the form!");
+  if (validUser && validPhone && validEmail && validCar && validAddress) {
+    console.log("All the 5 things a valid. Submitting the form!");
     success.style.removeProperty("display");
+    failure.style.display = "none";
   } else {
     console.error("Unable to submit the form");
     console.log("Please enter valid values");
+    success.style.display = "none";
     failure.style.removeProperty("display");
   }
 })

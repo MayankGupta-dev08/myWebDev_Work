@@ -30,7 +30,7 @@
 
   <div class="container my-3">
     <h1>Mayank Travels Help Desk</h1>
-    <form>
+    <form id="myForm" action="#">
       <div class="mb-3">
         <label for="username" class="form-label">Username</label>
         <input type="text" class="form-control" id="username" aria-describedby="usernameHelp"
@@ -60,12 +60,12 @@
         <label for="car" class="form-label">Select your travelling car</label>
         <select class="form-select" id="car" aria-describedby="carHelp">
           <option disabled selected value="">Choose one car</option>
-          <option>Hyundai Venue</option>
-          <option>Hyundai Creta</option>
-          <option>Fortuner</option>
-          <option>Maruti Vitara Brezza</option>
-          <option>Mahindra XUV700</option>
-          <option>Kia Sonet</option>
+          <option value="Hyundai Venue">Hyundai Venue</option>
+          <option value="Hyundai Creta">Hyundai Creta</option>
+          <option value="Toyota Fortuner">Toyota Fortuner</option>
+          <option value="Maruti Vitara Brezza">Maruti Vitara Brezza</option>
+          <option value="Mahindra XUV700">Mahindra XUV700</option>
+          <option value="Kia Sonet">Kia Sonet</option>
         </select>
         <div class="form-text valid-feedback">Looks good!</div>
         <div id="carHelp" class="form-text invalid-feedback">You must select one car.</div>
@@ -73,7 +73,10 @@
 
       <div class="mb-3">
         <label for="address">Enter your address</label>
-        <textarea class="form-control" name="address" id="address" rows="3"></textarea>
+        <textarea class="form-control" name="address" id="address" rows="3"
+          placeholder="Please enter your full address"></textarea>
+        <div class="form-text valid-feedback">Looks ok!</div>
+        <div class="form-text invalid-feedback">Address is necessary for communication.</div>
       </div>
 
       <div class="mb-3">
