@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webpage Crawler</title>
     <style>
-        body{
+        body {
             background-color: darkslateblue;
             color: white;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-weight: bold;
         }
-        h1{
+
+        h1 {
             text-align: center;
             text-decoration: underline;
         }
@@ -23,31 +24,32 @@
 <body>
     <h1>Welcome to your own WebPage Crawler</h1>
     <script>
-        // let address = prompt('Enter full link of a webpage.');
-        // let word = prompt("Enter the word to be searched in the links inside that webpage");
-/*
-        let str = 'python';
-        let lnks = document.links;
-        let pythonLinks = [];
-        for(let i=0; i<lnks.length; i++){
-            let val = lnks[i];
-            val = val['href'];
-            if(val.includes(str)){
-                pythonLinks.push(val);
-            }
-        }
-        console.log(pythonLinks);
- */        
+        let address = prompt('Enter full link of a webpage.');
+        let word = prompt("Enter the word to be searched in the links inside that webpage");
+
+        /*
+                let str = 'python';
+                let lnks = document.links;
+                let pythonLinks = [];
+                for(let i=0; i<lnks.length; i++){
+                    let val = lnks[i];
+                    val = val['href'];
+                    if(val.includes(str)){
+                        pythonLinks.push(val);
+                    }
+                }
+                console.log(pythonLinks);
+         */
         let str = 'python';
         let lnks = document.links;  //this is an HTML document object   //we will convert this is array and then use it
         let pythonLinks = [];
-        Array.from(lnks).forEach(function(elements){
+        Array.from(lnks).forEach(function (elements) {
             let hrf = elements.href;
-            if(hrf.includes(str)){
+            if (hrf.includes(str)) {
                 pythonLinks.push(hrf);
             }
         });
-        
+
         console.log(pythonLinks);
     </script>
 </body>
