@@ -1,5 +1,17 @@
 console.log("this is app.js for postmaster ");
 
+// GET request url
+// url1 = https://randomuser.me/api
+
+// POST request url
+// url2 = https://jsonplaceholder.typicode.com/posts
+/* json = {
+  'title': 'foo',
+  'body': 'bar',
+  'userId': 1,
+} */
+
+
 // all constants
 const parametersBox = document.getElementById('parametersBox');
 const paramsRadio = document.getElementById('paramsRadio');
@@ -95,9 +107,26 @@ submit.addEventListener('click', (e) => {
 
   // if requestType is GET, invoke fetch api to make a GET request
   if (requestType === 'GET') {
-    
+    fetch(url, {
+      method: 'GET',
+    })
+      .then(response => response.text())
+      .then((text) => {
+        // document.getElementById('responseText').value = text;
+        document.getElementById('responseText').innerHTML = text;
+        Prism.highlightAll();
+      });
   } else {
-    
+    fetch(url, {
+      method: 'POST',
+      body: data,
+      headers: { 'Content-Type': "application/json; charset=UTF-8" }
+    })
+      .then(response => response.text())
+      .then((text) => {
+        // document.getElementById('responseText').value = text;
+        document.getElementById('responseText').innerHTML = text;
+        Prism.highlightAll();
+      })
   }
-
 })
