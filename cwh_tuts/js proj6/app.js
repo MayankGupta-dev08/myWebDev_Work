@@ -6,6 +6,7 @@ const paramsRadio = document.getElementById('paramsRadio');
 const jsonRadio = document.getElementById('jsonRadio');
 const addParam = document.getElementById('addParam');
 const params = document.getElementById('params');
+const submit = document.getElementById('submit');
 
 // if page is refreshed then reset the form
 // if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
@@ -59,4 +60,44 @@ addParam.addEventListener('click', () => {
       event.target.parentElement.parentElement.remove();
     })
   }
+})
+
+// if the user clicks on the submit button
+submit.addEventListener('click', (e) => {
+  document.getElementById('responseText').innerHTML = "Fetching response, please wait..........";
+
+  // fetching uset entered values from domcontentloaded
+  const url = document.getElementById('url').value;
+  const requestType = document.querySelector("input[name='requestType']:checked").value;
+  const contentType = document.querySelector("input[name='contentType']:checked").value;
+  let data;
+
+  // if user has chosen params intead of json
+  if (contentType == 'json') {
+    data = document.getElementById('responseText').value;
+  } else {
+    data = {};
+    for (let i = 0; i < paramsCount + 1; i++) {
+      if (document.getElementById('parameterKey' + (i + 1)) != undefined) {
+        let key = document.getElementById('parameterKey' + (i + 1)).value;
+        let value = document.getElementById('parameterValue' + (i + 1)).value;
+        data[key] = value;
+      }
+    }
+    data = JSON.stringify(data);
+  }
+
+  // logging all user entered values
+  console.log('url: ', url);
+  console.log('requestType: ', requestType);
+  console.log('contentType: ', contentType);
+  console.log('data: ', data);
+
+  // if requestType is GET, invoke fetch api to make a GET request
+  if (requestType === 'GET') {
+    
+  } else {
+    
+  }
+
 })
