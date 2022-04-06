@@ -72,29 +72,31 @@
       <label for="contentType" class="col-sm-2 col-form-label">CONTENT TYPE</label>
       <div class="col-sm-10">
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="contentType" value="json" id="jsonRadio" checked>
-          <label class="form-check-label" for="jsonRadio">JSON</label>
+          <label class="form-check-label" for="jsonRadio">Json</label>
+          <input class="form-check-input" type="radio" name="contentType" value="json" id="jsonRadio" checked="checked">
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="contentType" value="params" id="paramsRadio">
           <label class="form-check-label" for="paramsRadio">Custom parameters</label>
+          <input class="form-check-input" type="radio" name="contentType" value="params" id="paramsRadio">
         </div>
       </div>
     </div>
 
     <!-- Parameters box - This will hide on clicking json option in content type  -->
-    <div id="paramtersBox" class="mb-3 row">
+    <div id="parametersBox" class="mb-3 row">
       <label for="contentType" class="col-sm-2 col-form-label">PARAMETER 1</label>
       <div class="col-md-4">
-        <input type="text" class="form-control" id="parameterKey1" placeholder="Enter Parameter 1 Key">
+        <input type="text" class="form-control" id="parameterKey1" placeholder="Enter Key for parameter 1">
       </div>
       <div class="col-md-4">
-        <input type="text" class="form-control" id="parameterValue1" placeholder="Enter Parameter 1 Value">
+        <input type="text" class="form-control" id="parameterValue1" placeholder="Enter Value for parameter 1">
       </div>
       <div class="col-auto">
         <button id="addParam" class="btn btn-primary">+</button>
       </div>
+      <div id="params" class="my-3"></div>
     </div>
+
 
     <!-- Json Request box - This will hide on clicking parameters option in content type -->
     <div id="jsonBox" class="mb-3 row">
@@ -119,7 +121,6 @@
           placeholder="Your response will appear here"></textarea>
       </div>
     </div>
-
   </div>
 
 
