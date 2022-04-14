@@ -9,6 +9,7 @@ const server = http.createServer(function (req, res) {
 });
 
 const port = 80;
-server.listen(port, '127.0.0.1', function () {
+const hostName = '127.0.0.1';
+server.listen(port, hostName, function () {
   console.log('Listening on port', port);
 })
