@@ -124,19 +124,40 @@ db.students.find().limit(2);
 db.students.find().count();
 ```
 
-### 9. Sort the number of rows in the output on the basis of something like member_since:1 in asc order
+
+### 9. Count the number of rows in the output
 
 ```
-db.students.find().sort({'member_since' : 1});
+db.students.find().count();
 ```
 
-### 10. Sort the number of rows in the output on the basis of something like member_since:1 in desc order
+### 10. Finding a row using Less than/Greater than/Less than equal to/Greater than equal to
+
+```
+db.students.find()({'member_since' : {$lte: 90}});
+```
+
+```
+db.students.find()({'member_since' : {$lte: 90}});
+```
+
+```
+db.students.find()({'member_since' : {$gt: 90}});
+```
+
+```
+db.students.find()({'member_since' : {$gte: 90}});
+```
+
+### 11. Sort the number of rows in the output on the basis of something like member_since:1 in desc order
 
 ```
 db.students.find().sort({'member_since' : -1});
 ```
 
-Updating a row
+### 12 Updation in MongoDB
+
+#### 12.1 Updating a row
 
 ```
 db.students.update({name: 'Shubham'},
@@ -154,4 +175,27 @@ db.students.update({name: 'Shubham'},
     'lang': 'JavaScript',
     'member_since': 51
 }, {upsert: true})
+```
+
+#### 12.2 use of increment operator for increasing value of a already set field
+
+```
+db.students.update({name: 'Rohan'},
+{$inc:{
+    member_since: 2
+}})
+```
+
+#### 12.2 use of rename operator for renaming a field
+
+```
+db.students.update({name: 'Rohan'},
+{$rename:{
+    member_since: "member"
+}})
+```
+
+### 13. Deleting a row
+```
+db.students.remove({name: 'Rohan'})
 ```
